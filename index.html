@@ -20,19 +20,20 @@
     </header>
     <main>
         <input type="text" name="name" id="name" class="name" placeholder="Your Name">
+
         <section id="dialog" class="dialog"> wizard dialog</section>
         <img src="./assets/html-assets/wizard-sprite.png" class="wizard" id="wizard">
         <section id="diceRolls" class="diceRolls">
-            <div>
+            <div class="dice" id="diceOne">
                 dice one
-            </div>
-            <div>
+            </div >
+            <div class="dice" id="diceTwo">
                 dice two
             </div>
-            <div>
+            <div class="dice" id="diceThree">
                 dice three
             </div>
-            <div>
+            <div class="dice" id="diceFour">
                 dice four
             </div>
             <button>
@@ -40,7 +41,7 @@
             </button>
         </section>
         <section class="results">
-            <ul>
+            <ul id="list">
                 list of rolls
             </ul>
         </section>
