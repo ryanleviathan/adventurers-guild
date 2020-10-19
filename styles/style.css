@@ -42,12 +42,12 @@ main {
     position: relative;
     width: 300px;
     height: 180px;
-    padding: 40px;
     background: yellow;
     -webkit-border-radius: 15px;
-    -moz-border-radius: 20px;
+    -moz-border-radius: 10px;
     border-radius: 40px;
     margin-left: 45%;
+    box-shadow: black 8px 8px;
     
 
 }
@@ -56,19 +56,40 @@ main {
     content: '';
     position: absolute;
     border-style: solid;
-    border-width: 42px 12px 0;
+    border-width: 102px 22px 0;
     border-color: yellow transparent;
     display: block;
     z-index: 1;
-    bottom: -42px;
+    bottom: -92px;
     left: 220px;
+    
+    
 }
+
+
 .wizard {
 
     margin-left: 60%;
     height: 500px;
     width: 330px;
+   
 }
+
+.dice {
+
+    
+}
+
+
+
+    
+
+.diceRolls {
+
+    background-image: url(/assets/backgroundD&D.jpg);
+    height: 200px;
+    }
+
 
 section {
     background-color: var(--color5);
@@ -82,7 +103,7 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+   
 }
 
 header {
