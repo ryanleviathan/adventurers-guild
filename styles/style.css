@@ -36,6 +36,31 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
+.dialog {
+    position: relative;
+    width: 250px;
+    height: 120px;
+    padding: 20px;
+    background: yellow;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+
+}
+
+.dialog:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 42px 12px 0;
+    border-color: yellow transparent;
+    display: block;
+    z-index: 1;
+    bottom: -42px;
+    left: 188px;
+}
+
+
 section {
     background-color: var(--color5);
     width: 1000px;
