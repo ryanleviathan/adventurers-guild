@@ -37,6 +37,11 @@ main {
     border-radius: 40px;
     margin-left: 45%;
     box-shadow: black 8px 8px;
+    font-size: 1.5em;
+    font-family: cursive;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
     
 
 }
@@ -111,6 +116,9 @@ section {
 
 }
 
+#list li {
+    display: inline;
+}
 .results {
     background-image: url(../assets/html-assets/results-background.png);
     background-position: center;
@@ -125,6 +133,7 @@ section {
     margin-bottom: 10%;
     margin-top: 0%;
     margin-left: 10%
+
 }
 
 header {
