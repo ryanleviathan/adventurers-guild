@@ -1,7 +1,9 @@
 // import functions and grab DOM elements
-
+import script from './data/wizard-Script.js';
 import { rollDice, imagePicker, attributeNumber, setInLocalStorage } from './utils.js';
 const USER = 'USER';
+
+
 
 // initialize state
 
@@ -25,11 +27,29 @@ const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
+
+dialog.textContent = 'Welcome young adventurer! What is your name?'
+let userData;
+
 nameButton.addEventListener('click', () => {
     const userName = name.value;
     nameButton.classList.add('display');
     nameButton.style.display = 'none';
-});  
+    userData =
+    {
+        name: userName,
+        rolls: {},
+        class: {},
+        race: {}
+    };
+
+    setInLocalStorage(USER, userData);
+
+    dialog.textContent = script[1].description;
+
+    setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
+
+});
 
 
 
@@ -72,23 +92,14 @@ roll.addEventListener('click', () => {
 
     if (rollsRemaining === 0) {
         roll.disabled = true;
-        
-        const userData = [
-            {
-                name: name.value,
-                rolls: {},   
-                class: {},
-                race: {}
-            }
-        ];
         userData.rolls = rollTracker;
-        setInLocalStorage(userData, USER);    
+        setInLocalStorage(USER, userData);
     }
 });
 
 const nextPage = document.getElementById('next');
 nextPage.addEventListener('click', () => {
-    window.location.href = './race-page/index.html';   
+    window.location.href = './race-page/index.html';
 });
 
 

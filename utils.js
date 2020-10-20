@@ -15,7 +15,7 @@ export function imagePicker(img, dice) {
         img.src = './assets/d6-assets/5.png';
     } if (dice.value === 6) {
         img.src = './assets/d6-assets/6.png';
-    } 
+    }
 }
 export function attributeNumber(rollArray) {
     const lowest = Math.min(rollArray[0], rollArray[1], rollArray[2], rollArray[3]);
@@ -27,4 +27,8 @@ export function setInLocalStorage(key, value) {
     const stringyItem = JSON.stringify(value);
     localStorage.setItem(key, stringyItem);
     return value;
+}
+export function getFromLocalStorage(key) {
+    const item = localStorage.getItem(key);
+    return JSON.parse(item);
 }
