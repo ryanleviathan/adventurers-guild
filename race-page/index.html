@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="..styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="..styles/home.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Race Selection</title>
 </head>
 
 <body>
@@ -23,43 +23,47 @@
             <div class="left-body">
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/dragonborn.png" alt="dragonborn" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/dwarf.png" alt="dwarf" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/elf.png" alt="elf" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/gnome.png" alt="gnome" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/half-elf.png" alt="half-elf" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/half-orc.png" alt="half-orc" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/human.png" alt="human" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/orc.png" alt="orc" class="races">
+                    <img class="races">
                 </label>
                 <label>
                     <input type="radio" name="race">
-                    <img src="/assets/race-assets/tiefling.png" alt="tiefling" class="races">
+                    <img class="races">
                 </label>
 
                 <div class="right-body">
+
+                    <p id="dialog" class="dialog">wizard dialog</p>
+
                     <p id="dialogue" class="dialog"> wizard dialogue</p>
+
                     <span>
                         <p id="user-choice">Avatar based on radio selection</p>
                         <img src="../assets/html-assets/wizard-sprite.png" class="wizard" id="wizard">
@@ -71,7 +75,9 @@
         <button id="button">save race selection and head to class page</button>
     </section>
     <footer>
-   
+        <section class="footer">
+            <button>Save race selection and head to class page!</button>
+        </section>
     </footer>
 
     <script type="module" src="race.js"></script>
