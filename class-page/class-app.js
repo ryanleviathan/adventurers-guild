@@ -1,10 +1,13 @@
 import classData from '../data/class.js';
 import script from '../data/wizard-Script.js';
 import { USER } from '../utils.js';
-import { findById } from '../utils.js';
+import { findById, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 
 const radios = document.querySelectorAll('input');
 const images = document.querySelectorAll('.classes');
+const dialogue = document.getElementById('dialog');
+const avatarDisplay = document.getElementById('radio-selection');
+const submitButton = document.getElementById('button');
 
 function populateClass(classData) {
     radios[0].value = classData[0].id;
@@ -35,18 +38,28 @@ function populateClass(classData) {
 
 }
 
-function updateUser() {
-    const user = JSON.parse(localStorage.getItem(USER));
-    localStorage.setItem(USER, JSON.stringify(user));
-}
-
 populateClass(classData);
 
+//radios will pull class data and populate wizard dialogue & avatar sections with relevant information
 for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', (e) => {
-        const id = e.target.value;
-        const classChoice = findById(classData, id);
+        const classId = e.target.value;
+        console.log(classId);
+        const classChecked = findById(classData, classId);
+        console.log(classChecked);
+        const wizardDialogue = classChecked.description;
         
-        return updateUser(classChoice);
+        return dialogue.textContent = wizardDialogue;
     });
 }
+
+//submit button will add selected class to USER in local storage
+submitButton.addEventListener('click', () => {
+    
+    const checked = document.querySelector(':checked');
+    const userClass = checked.value;
+    const userData = getFromLocalStorage(USER);
+    userData.userClass = userClass;
+
+    setInLocalStorage(USER, userData);
+});

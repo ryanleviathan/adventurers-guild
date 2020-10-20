@@ -38,7 +38,7 @@ nameButton.addEventListener('click', () => {
     {
         name: userName,
         rolls: {},
-        class: {},
+        userClass: {},
         race: {}
     };
 
