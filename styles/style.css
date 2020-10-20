@@ -193,6 +193,11 @@ content {
 p {
     margin: var(--gutter);
 }
+
+.next {
+
+    background-color: red;
+}
   
 footer {
     position: fixed;
