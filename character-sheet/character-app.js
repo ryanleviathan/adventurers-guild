@@ -1,10 +1,6 @@
 import { findById, getFromLocalStorage, setInLocalStorage, USER } from '../utils.js';
 
 
-
-
-
-
 //Attributes from DOM
 const strength = document.getElementById('str');
 const strengthMod = document.getElementById('strMod');
@@ -26,3 +22,5 @@ const speed = document.getElementById('speed');
 //
 
 const userdata = getFromLocalStorage(USER);
+
+

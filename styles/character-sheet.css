@@ -5,6 +5,10 @@ header {
     align-self: flex-start;
 }
 body {
+    background-image: url(../assets/html-assets/background-tower.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     grid-template-columns:60% 40%;
     border: solid black;
@@ -23,7 +27,10 @@ body {
     border-color: black;
     background-image: url(../assets/html-assets/character-sheet.png);
     background-repeat: no-repeat;
+    opacity: .9;
     margin-right: 7em;
+    margin-left: 5em;
+    margin-top:10em;
     
 }
 .sectionOne {
@@ -79,8 +86,25 @@ body {
     border: solid red 1px ;
 }
 .rolls-display {
-    height: 350px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 250px;
     width: 300px;
     border: solid black;
     margin-top: 2em;
+}
+.rollRowOne {
+    border: solid blue;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    text-align: center;
+}
+
+.rollRowTwo {
+    border: solid black;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    text-align: center;
 }
