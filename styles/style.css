@@ -54,12 +54,30 @@ main {
     
 }
 
+.diceRolls {
+
+    background-image: url(../assets/html-assets/dice-table.png);
+    height: 255px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 40%;
+    margin-bottom: 10%;
+    margin-top: -35%;
+    margin-left: 10%;
+    
+
+    }
+
+
+
+
 
 .wizard {
 
     margin-left: 60%;
     height: 500px;
     width: 330px;
+    
    
 }
 
@@ -68,14 +86,7 @@ main {
 
     
 
-.diceRolls {
 
-    background-image: url(../assets/html-assets/dice-table.png);
-    height: 255px;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    }
 
 
 section {
@@ -108,6 +119,10 @@ section {
     font-family: papyrus;
     font-weight: bold;
     text-shadow: black 2px 2px;
+    margin-right: 40%;
+    margin-bottom: 10%;
+    margin-top: 0%;
+    margin-left: 10%
 }
 
 header {
