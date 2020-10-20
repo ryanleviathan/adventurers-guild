@@ -1,0 +1,62 @@
+header {
+    height: 100px;
+    border: solid;
+    border-color: black;
+}
+body {
+    display: flex;
+    grid-template-columns:60% 40%;
+    border: solid black;
+    height: 1000px;
+}
+.character-sheet{
+    height: 700px;
+    width: 525px;
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    border: solid;
+    border-color: black;
+    background-image: url(../assets/html-assets/character-sheet.png);
+    background-repeat: no-repeat;
+    margin-right: 7em;
+    
+}
+.sectionOne {
+    display: grid;
+    grid-template-rows:73% 25% ;
+    width: 100%;
+    height: 700px;
+    border: solid blue;
+}
+.attb-skill {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    border: solid brown;
+}
+.attributes {
+    border: solid purple;
+}
+.skills-prof {
+    border: solid black;
+}
+
+.percep-prof {
+    border: solid green;
+}
+.sectionTwo {
+    width: 100%;
+    height: 700px;
+    border: solid red;
+    
+}
+.sectionThree {
+    width: 100%;
+    height: 700px;
+    border: solid black;    
+}
+.rolls-display {
+    height: 350px;
+    width: 300px;
+    border: solid black;
+    margin-top: 2em;
+}
