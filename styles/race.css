@@ -7,7 +7,7 @@
     -webkit-border-radius: 15px;
     -moz-border-radius: 10px;
     border-radius: 40px;
-    margin-left: 55%;
+    margin-left: 85%;
     margin-top: -55%;
     box-shadow: black 8px 8px;
     font-size: 1.5em;
@@ -40,7 +40,7 @@
 
 .wizard {
 
-    margin-left: 95%;
+    margin-left: 105%;
     height: 500px;
     width: 330px;
     
