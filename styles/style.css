@@ -82,8 +82,11 @@ main {
 
 .diceRolls {
 
-    background-image: url(./assets/backgroundD&D.jpg);
-    height: 200px;
+    background-image: url(../assets/html-assets/dice-table.png);
+    height: 255px;
+    background-position: center;
+    background-repeat: no-repeat;
+
     }
 
 
@@ -109,9 +112,11 @@ section {
 }
 
 .results {
-
+    background-image: url(../assets/html-assets/results-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
     font-size: 2.5em; 
-    color: yellow;
+    color: black;
     font-family: papyrus;
     font-weight: bold;
     text-shadow: black 2px 2px;
