@@ -1,8 +1,8 @@
 // import functions and grab DOM elements
 import script from './data/wizard-Script.js';
-
+import { USER } from './utils.js';
 import { rollDice, imagePicker, attributeNumber, setInLocalStorage } from './utils.js';
-export const USER = 'USER';
+
 
 // initialize state
 

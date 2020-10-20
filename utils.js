@@ -1,3 +1,5 @@
+export const USER = 'USER';
+
 export function rollDice() {
     const roll = Math.ceil(Math.random() * 6);
     return roll;
