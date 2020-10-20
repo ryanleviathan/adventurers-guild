@@ -12,9 +12,10 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
-    background-image: url("../assets/backgroundD&D.jpg");
+    background-image: url(../assets/html-assets/background-tower.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 main {
@@ -114,7 +115,8 @@ section {
     background-image: url(../assets/html-assets/results-background.png);
     background-position: center;
     background-repeat: no-repeat;
-    font-size: 2.5em; 
+    height: 200px;
+    font-size: 2em; 
     color: black;
     font-family: papyrus;
     font-weight: bold;
@@ -128,9 +130,8 @@ section {
 header {
     display: flex;
     justify-content: center;
-    background-image: url("/assets/backgroundD&D.jpg");
     color: red;
-    font-size: 160px;
+    font-size: 100px;
     font-family: papyrus;
     margin-top: 0%;
     font-weight: bold;
