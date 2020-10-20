@@ -29,8 +29,6 @@ nameButton.addEventListener('click', () => {
     const userName = name.value;
     nameButton.classList.add('display');
     nameButton.style.display = 'none';
-    console.log(userName);
-
 });  
 
 
@@ -45,10 +43,10 @@ let rollTracker = [];
 let rollsRemaining = 6;
 
 roll.addEventListener('click', () => {
-diceOne.value = Number(rollDice());
-diceTwo.value = Number(rollDice());
-diceThree.value = Number(rollDice());
-diceFour.value = Number(rollDice());
+    diceOne.value = Number(rollDice());
+    diceTwo.value = Number(rollDice());
+    diceThree.value = Number(rollDice());
+    diceFour.value = Number(rollDice());
 
     imagePicker(imgOne, diceOne);
     imagePicker(imgTwo, diceTwo);
