@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="..styles/reset.css">
-    <link rel="stylesheet" href="..styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="..styles/home.css">
     <title>Document</title>
 </head>
@@ -15,29 +15,56 @@
 <body>
     <header class="header">
         <div>
-            ~Header for Races~
+            ~Races~
         </div>
     </header>
     <main>
-       <section class="body">
+        <section class="body">
             <div class="left-body">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-                <input type="radio" name="race">
-            </div>
-            <div class="right-body">
-                <p id="dialog" class="dialog"> wizard dialog</p>
-                <span>
-                    <p>Avatar based on radio selection</p>
-                    <img src="../assets/html-assets/wizard-sprite.png" class="wizard" id="wizard">
-                </span>
-            </div>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/dragonborn.png" alt="dragonborn" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/dwarf.png" alt="dwarf" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/elf.png" alt="elf" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/gnome.png" alt="gnome" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/half-elf.png" alt="half-elf" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/half-orc.png" alt="half-orc" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/human.png" alt="human" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/orc.png" alt="orc" class="races">
+                </label>
+                <label>
+                    <input type="radio" name="race">
+                    <img src="/assets/race-assets/tiefling.png" alt="tiefling" class="races">
+                </label>
+
+                <div class="right-body">
+                    <p id="dialog" class="dialog"> wizard dialog</p>
+                    <span>
+                        <p>Avatar based on radio selection</p>
+                        <img src="../assets/html-assets/wizard-sprite.png" class="wizard" id="wizard">
+                    </span>
+                </div>
         </section>
     </main>
     <footer>
@@ -45,7 +72,7 @@
             <button>save race selection and head to class page</button>
         </section>
     </footer>
-    
+
     <script type="module" src="app.js"></script>
 </body>
 
