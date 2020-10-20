@@ -1,6 +1,8 @@
 // import functions and grab DOM elements
 
-import { rollDice, imagePicker, attributeNumber } from './utils.js';
+import { rollDice, imagePicker, attributeNumber, setInLocalStorage } from './utils.js';
+const USER = 'USER';
+
 // initialize state
 
 // set event listeners to update state and DOM
@@ -14,13 +16,23 @@ const imgOne = document.getElementById('imgOne');
 const imgTwo = document.getElementById('imgTwo');
 const imgThree = document.getElementById('imgThree');
 const imgFour = document.getElementById('imgFour');
-const roll = document.querySelector('button');
+const roll = document.getElementById('roll');
 const LiOne = document.getElementById('one');
 const LiTwo = document.getElementById('two');
 const LiThree = document.getElementById('three');
 const LiFour = document.getElementById('four');
 const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
+const nameButton = document.getElementById('nameButton');
+
+nameButton.addEventListener('click', () => {
+    const userName = name.value;
+    nameButton.classList.add('display');
+    nameButton.style.display = 'none';
+    console.log(userName);
+
+});  
+
 
 
 
@@ -62,12 +74,25 @@ diceFour.value = Number(rollDice());
 
     if (rollsRemaining === 0) {
         roll.disabled = true;
-
+        
+        const userData = [
+            {
+                name: name.value,
+                rolls: {},   
+                class: {},
+                race: {}
+            }
+        ];
+        userData.rolls = rollTracker;
+        setInLocalStorage(userData, USER);    
     }
-    
-
-
 });
+
+const nextPage = document.getElementById('next');
+nextPage.addEventListener('click', () => {
+    window.location.href = './race-page/index.html';   
+});
+
 
 
 
