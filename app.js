@@ -28,7 +28,7 @@ const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
 
-dialog.textContent = 'Welcome young adventurer! What is your name?'
+dialog.textContent = 'Welcome young adventurer! What is your name?';
 let userData;
 
 nameButton.addEventListener('click', () => {
@@ -48,7 +48,7 @@ nameButton.addEventListener('click', () => {
     dialog.textContent = script[1].description;
 
     setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
-
+    setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
 });
 
 
@@ -94,6 +94,7 @@ roll.addEventListener('click', () => {
         roll.disabled = true;
         userData.rolls = rollTracker;
         setInLocalStorage(USER, userData);
+        dialog.textContent = script[4].description;
     }
 });
 
