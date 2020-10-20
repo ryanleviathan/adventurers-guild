@@ -1,12 +1,10 @@
 import classData from '../data/class.js';
-import script from '../data/wizard-Script.js';
 import { USER } from '../utils.js';
 import { findById, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 
 const radios = document.querySelectorAll('input');
 const images = document.querySelectorAll('.classes');
 const dialogue = document.getElementById('dialog');
-const avatarDisplay = document.getElementById('radio-selection');
 const submitButton = document.getElementById('button');
 
 function populateClass(classData) {
@@ -44,9 +42,7 @@ populateClass(classData);
 for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', (e) => {
         const classId = e.target.value;
-        console.log(classId);
         const classChecked = findById(classData, classId);
-        console.log(classChecked);
         const wizardDialogue = classChecked.description;
         
         return dialogue.textContent = wizardDialogue;
@@ -62,4 +58,5 @@ submitButton.addEventListener('click', () => {
     userData.userClass = userClass;
 
     setInLocalStorage(USER, userData);
+    window.location = '../character-sheet/index.html';
 });

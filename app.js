@@ -26,7 +26,6 @@ const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
-
 dialog.textContent = 'Welcome young adventurer! What is your name?';
 let userData;
 
@@ -50,15 +49,7 @@ nameButton.addEventListener('click', () => {
     setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
 });
 
-
-
-
-
-
-
 let rollTracker = [];
-
-
 let rollsRemaining = 6;
 
 roll.addEventListener('click', () => {
@@ -78,8 +69,6 @@ roll.addEventListener('click', () => {
     let totalOfRoll = attributeNumber(rollArray);
     rollTracker.push(totalOfRoll);
 
-    console.log(totalOfRoll);
-
     LiOne.textContent = rollTracker[0];
     LiTwo.textContent = rollTracker[1];
     LiThree.textContent = rollTracker[2];
@@ -87,7 +76,7 @@ roll.addEventListener('click', () => {
     LiFive.textContent = rollTracker[4];
     LiSix.textContent = rollTracker[5];
 
-    rollsRemaining--;
+    --rollsRemaining;
 
     if (rollsRemaining === 0) {
         roll.disabled = true;

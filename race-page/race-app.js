@@ -51,21 +51,3 @@ button.addEventListener('click', () => {
 
     window.location = '../class-page/index.html';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function updateUser() {
-    const user = JSON.parse(localStorage.getItem('USER'));
-    localStorage.setItem('USER', JSON.stringify(user));
-}
