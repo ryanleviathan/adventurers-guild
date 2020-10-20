@@ -36,10 +36,10 @@ nameButton.addEventListener('click', () => {
     nameButton.style.display = 'none';
     userData =
     {
-        name: userName,
-        rolls: {},
+        userName: userName,
+        userRolls: {},
         userClass: {},
-        race: {}
+        userRace: {}
     };
 
     setInLocalStorage(USER, userData);

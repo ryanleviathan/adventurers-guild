@@ -62,4 +62,6 @@ submitButton.addEventListener('click', () => {
     userData.userClass = userClass;
 
     setInLocalStorage(USER, userData);
+
+    window.location = '../character-sheet/index.html';
 });
