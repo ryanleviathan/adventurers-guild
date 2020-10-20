@@ -20,6 +20,13 @@ const armorClass = document.getElementById(armorClass);
 const initiative = document.getElementById('initiative');
 const speed = document.getElementById('speed');
 //
+// roll display
+const rollOne = document.getElementById('rollOne');
+const rollTwo = document.getElementById('rollTwo');
+const rollThree = document.getElementById('rollThree');
+const rollFour = document.getElementById('rollFour');
+const rollFive = document.getElementById('rollFive');
+const rollSix = document.getElementById('rollSix');
 
 const userdata = getFromLocalStorage(USER);
 
