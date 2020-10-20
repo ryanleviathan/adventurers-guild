@@ -2,6 +2,7 @@ header {
     height: 100px;
     border: solid;
     border-color: black;
+    align-self: flex-start;
 }
 body {
     display: flex;
@@ -57,9 +58,16 @@ body {
     height: 700px;
     border: solid red;   
 }
-.sectionTwo, section {
-    border: solid blue 1px;
+
+.ac-int-spd {
+    display: grid;
+    grid-template-columns: 36% 28% 33%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
 }
+
 .sectionThree {
     display: grid;
     grid-template-rows:14% 11% 7% 7% 7%;
