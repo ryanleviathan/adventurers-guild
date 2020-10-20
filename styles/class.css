@@ -1,14 +1,25 @@
 
+.right-body {
+        
+    width: 210px;
+    height: 180px;
+    margin-left: 46%;
+    margin-top: -37%;
+
+
+
+}
+
 .dialog {
     position: relative;
-    width: 520px;
-    height: 200px;
+    width: 600px;
+    height: 900px;
     background: yellow;
     -webkit-border-radius: 15px;
     -moz-border-radius: 10px;
     border-radius: 40px;
-    margin-left: 125%;
-    margin-top: -105%;
+    margin-left: 105%;
+    margin-top: -110%;
     box-shadow: black 8px 8px;
     font-size: 1.5em;
     font-family: cursive;
@@ -33,6 +44,12 @@
     
 }
 
+.left-body {
+
+    margin-left: -32%;
+    margin-right: 20%;
+}
+
 
 .classes {
 
@@ -54,7 +71,7 @@
 
 .footer {
 
-    margin-top: -10%;
+    margin-top: 10%;
     margin-bottom: 25%;
     margin-left: 10%;
 }

@@ -128,7 +128,7 @@ section {
     color: black;
     font-family: papyrus;
     font-weight: bold;
-    text-shadow: black 2px 2px;
+    text-shadow: red 2px 2px;
     margin-right: 40%;
     margin-bottom:2%;
     margin-top: 5%;
@@ -152,6 +152,7 @@ input[type="radio"]:checked + img {
     border: solid 6px red;
     border-radius: 20px;
     background-color: red;
+    opacity: .75;
 }
 input[type="radio"] {
     display: none;
