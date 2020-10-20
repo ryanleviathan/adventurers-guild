@@ -5,7 +5,8 @@ import { findById } from '../utils.js';
 
 const radios = document.querySelectorAll('input');
 const images = document.querySelectorAll('.races');
-const wizardText = 
+
+populateRace(radios);
 
 function populateRace(raceData) {
     radios[0].value = raceData[0];
@@ -27,5 +28,18 @@ function populateRace(raceData) {
     images[6].src = raceData[6].url_image;
     images[7].src = raceData[7].url_image;
     images[8].src = raceData[8].url_image;
+}
 
-};
+for (let i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click', (e) => {
+        const id = e.target.value;
+        const raceChoice = findById(raceData, id);
+
+        return updateUser(raceChoice);
+    });
+}
+
+function updateUser() {
+    const user = JSON.parse(localStorage.getItem('USER'));
+    localStorage.setItem('USER', JSON.stringify(user));
+}
