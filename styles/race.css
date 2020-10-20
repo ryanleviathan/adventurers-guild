@@ -10,6 +10,15 @@
 
 
 }
+
+.races:hover {
+
+    transform: scale(1.2);
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 15%;
+
+
+}
 .dialog {
     position: relative;
     width: 580px;
