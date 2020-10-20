@@ -10,10 +10,24 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    grid-template-columns:60% 40%;
+    grid-template-columns:10% 60% 40%;
     border: solid black;
     height: 1000px;
 }
+.statAssignBox {
+    height: 370px;
+    width: 100px;
+    display: grid;
+    grid-template-rows: ;
+    margin-top: 18em;
+    margin-left: 2em;
+}
+.pick {
+    display: grid;
+    justify-content: right;
+    align-items: center;
+}
+
 .modifier {
     margin-top: .6em;
     margin-left: .5em;
@@ -23,14 +37,13 @@ body {
     width: 525px;
     display: grid;
     grid-template-columns: 34% 33% 33%;
-    border: solid;
-    border-color: black;
     background-image: url(../assets/html-assets/character-sheet.png);
     background-repeat: no-repeat;
     opacity: .9;
     margin-right: 7em;
-    margin-left: 5em;
     margin-top:10em;
+    border: solid lightslategrey 2px;
+    
     
 }
 .sectionOne {
@@ -38,32 +51,32 @@ body {
     grid-template-rows:73% 25% ;
     width: 100%;
     height: 700px;
-    border: solid blue;
+    
 }
 .attb-skill {
     display: grid;
     grid-template-columns: 45% 55%;
-    border: solid brown;
+    
 }
 .attributes {
     display: grid;
-    grid-template-rows: 25% 13% 13% 12% 13% 13%;
+    grid-template-rows: 26% 13% 13% 12% 12% 13%;
     text-align: center;
-    border: solid purple;
+    
 }
 .skills-prof {
-    border: solid black;
+    
 }
 
 .percep-prof {
-    border: solid green;
+    
 }
 .sectionTwo {
     display: grid;
     grid-template-rows: 14% 10% 8% 7% 7%;
     width: 100%;
     height: 700px;
-    border: solid red;   
+     
 }
 
 .ac-int-spd {
@@ -80,11 +93,9 @@ body {
     grid-template-rows:14% 11% 7% 7% 7%;
     width: 100%;
     height: 700px;
-    border: solid black;    
+        
 }
-.sectionThree, section {
-    border: solid red 1px ;
-}
+
 .rolls-display {
     display: grid;
     grid-template-rows: 50% 50%;
@@ -107,4 +118,7 @@ body {
     grid-template-columns: 33% 33% 33%;
     align-items: center;
     text-align: center;
+}
+span , p {
+    margin-left: .5em;
 }
