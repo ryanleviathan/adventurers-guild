@@ -1,9 +1,11 @@
 import raceData from '../data/race.js';
 import { USER } from '../utils.js';
-import { findById } from '../utils.js';
+import { findById, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 
 const radios = document.querySelectorAll('input');
 const images = document.querySelectorAll('.races');
+const wizardDialogBox = document.getElementById('dialog');
+const button = document.getElementById('button');
 
 populateRace(raceData);
 
@@ -32,11 +34,23 @@ function populateRace() {
 for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', (e) => {
         const raceId = e.target.value;
-        console.log(raceId);
         const raceChecked = findById(raceData, raceId);
-        console.log(raceChecked);
+        const dialog = raceChecked.description;
+
+        return wizardDialogBox.textContent = dialog;
     });
 }
+
+button.addEventListener('click', () => {
+    const checked = document.querySelector(':checked');
+    const race = checked.value;
+    const userData = getFromLocalStorage(USER);
+    userData.race = race;
+    
+    setInLocalStorage(USER, userData);
+
+    window.location = '../class-page/index.html';
+});
 
 
 
