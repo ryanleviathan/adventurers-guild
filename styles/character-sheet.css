@@ -106,7 +106,7 @@ body {
     margin-top: 2em;
 }
 .rollRowOne {
-    border: solid blue;
+    border: solid black;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     align-items: center;
@@ -122,4 +122,19 @@ body {
 }
 span , p {
     margin-left: .5em;
+}
+:checked {
+    border: solid blue 5px;
+    background-color: blue;
+    text-decoration: ;
+} 
+.rollOne:hover{
+    transform: scale(1.2);
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 15%;
+    opacity: 1;
+}
+
+input {
+    display: none;
 }

@@ -4,6 +4,7 @@ import classes from '../data/class.js';
 // Pull from localStorage
 const userdata = getFromLocalStorage(USER);
 const rolls = userdata.rolls;
+console.log(rolls);
 
 //Attributes from DOM
 const strength = document.getElementById('str');
@@ -34,24 +35,25 @@ const speed = document.getElementById('speed');
 
 // roll display
 const rollOne = document.getElementById('rollOne');
-rollOne.textContent = userdata.rolls[0];
+rollOne.textContent = userdata.rolls[0].value;
 const rollTwo = document.getElementById('rollTwo');
-rollTwo.textContent = userdata.rolls[1];
+rollTwo.textContent = userdata.rolls[1].value;
 const rollThree = document.getElementById('rollThree');
-rollThree.textContent = userdata.rolls[2];
+rollThree.textContent = userdata.rolls[2].value;
 const rollFour = document.getElementById('rollFour');
-rollFour.textContent = userdata.rolls[3];
+rollFour.textContent = userdata.rolls[3].value;
 const rollFive = document.getElementById('rollFive');
-rollFive.textContent = userdata.rolls[4];
+rollFive.textContent = userdata.rolls[4].value;
 const rollSix = document.getElementById('rollSix');
-rollSix.textContent = userdata.rolls[5];
+rollSix.textContent = userdata.rolls[5].value;
 
 //albilty modifier setting
 function populateRolls(select, rolls) {
     for (let i = 0; i < rolls.length; i++) {
         const option = document.createElement('option');
         option.textContent = rolls[i].value;
-        option.value = rolls[i];
+        option.value = rolls[i].value;
+        option.id = rolls[i].id;
         select.append(option);
     }
 }
@@ -64,14 +66,21 @@ populateRolls(wisOptions, rolls);
 populateRolls(chaOptions, rolls);
 
 strOptions.addEventListener('change', (e) => {
-    e.preventDefault;
     let raceInfo = findById(race, userdata.race);
     let strBonus = raceInfo.strength;
     if (!raceInfo.strength) {
         strBonus = 0;
     }
+
+
+    // console.log(e.target.getAttribute('id'));
+    // const filteredRolls = rolls.filter(item => {
+    //     return item.id !== e.target.id;
+    // });
+
     strength.textContent = Number(strBonus) + Number(e.target.value);
-    strOptions.style.display = 'none';
+    // strOptions.style.display = 'none';
+
 });
 
 dexOptions.addEventListener('change', (e) => {
