@@ -51,6 +51,7 @@ nameButton.addEventListener('click', () => {
 
 let rollTracker = [];
 let rollsRemaining = 6;
+let rollsToPush = []
 
 roll.addEventListener('click', () => {
     diceOne.value = Number(rollDice());
@@ -79,8 +80,21 @@ roll.addEventListener('click', () => {
     --rollsRemaining;
 
     if (rollsRemaining === 0) {
+
         roll.disabled = true;
-        userData.rolls = rollTracker;
+
+        for (let i = 0; i < rollTracker.length; i++) {
+
+            rollTracker[i] = {
+                id: `roll-${[i]}`,
+                value: rollTracker[i]
+            };
+            rollsToPush.push(rollTracker[i]);
+        }
+        console.log(rollsToPush);
+
+
+        userData.rolls = rollsToPush;
         setInLocalStorage(USER, userData);
         dialog.textContent = script[4].description;
     }

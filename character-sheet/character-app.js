@@ -50,7 +50,7 @@ rollSix.textContent = userdata.rolls[5];
 function populateRolls(select, rolls) {
     for (let i = 0; i < rolls.length; i++) {
         const option = document.createElement('option');
-        option.textContent = rolls[i];
+        option.textContent = rolls[i].value;
         option.value = rolls[i];
         select.append(option);
     }
