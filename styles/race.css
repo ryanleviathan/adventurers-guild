@@ -53,7 +53,16 @@
     
     
 }
+.races {
+    position: relative;
+    justify-content: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 250px;
+    width: 180px;
+    opacity: .5;
 
+}
 
 .races:hover {
 
