@@ -81,7 +81,7 @@ dexOptions.addEventListener('change', (e) => {
     if (!raceInfo.dexterity) {
         dexBonus = 0;
     }
-    strength.textContent = Number(dexBonus) + Number(e.target.value);
+    dexterity.textContent = Number(dexBonus) + Number(e.target.value);
     dexOptions.style.display = 'none';
 });
 
