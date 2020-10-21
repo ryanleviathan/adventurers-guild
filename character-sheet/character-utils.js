@@ -29,3 +29,24 @@ export function modifier(attribute) {
         return 6;
     }
 }
+export function armorClass(userData, dexMod) {
+    const
+
+}
+
+
+
+
+
+strengthMod.textcontent = modifier(strength);
+dexterityMod.textcontent = modifier(dexterity);
+constitutionMod.textcontent = modifier(constitution);
+intelligenceMod.textcontent = modifier(intelligence);
+wisdomMod.textcontent = modifier(wisdom);
+charismaMod.textcontent = modifier(charisma);
+
+
+
+
+speed.textcontent = userData.race.speed;
+initiative.textcontent = dexterityMod.textcontent; 
