@@ -2,7 +2,7 @@
 .dialog {
     position: relative;
     width: 520px;
-    height: 500px;
+    height: 400px;
     background: yellow;
     -webkit-border-radius: 15px;
     -moz-border-radius: 10px;
@@ -32,3 +32,13 @@
     
     
 }
+.wizard {
+
+    margin-left: 60%;
+    height: 500px;
+    width: 330px;
+    
+   
+}
+
+
