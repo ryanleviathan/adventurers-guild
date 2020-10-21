@@ -80,3 +80,4 @@ export function numberImage(radio, img) {
         img.src = '../assets/numbers/eighteen.png';
     }
 }
+

@@ -33,9 +33,6 @@ const primAbility = userClass.primaryAbility;
 dialog.textContent = `Welcome to the character sheet page! Based on your selections you are an ${userData.race}!
 Your class is a ${userData.userClass}. Your primary ability ${primAbility}.`;
 
-
-
-
 // roll display
 const rollOneText = document.getElementById('roll-one-output');
 const rollOneValue = document.getElementById('roll-one');
@@ -68,7 +65,27 @@ rollSixText.textContent = userData.rolls[5].value;
 rollSixValue.value = userData.rolls[5].value;
 
 const radios = document.querySelectorAll('input');
-console.log(radios);
+
+export function loopRadios() {
+    for (let i = 0; i < radios.length; i++) {
+        const radio = radios[i];
+        radio.addEventListener('click', () => {
+            
+        });
+    }
+}
+
+function renderAbilities() {
+    let strength = loopRadios();
+    strength.textContent = strength;
+}
+
+
+
+// dialog.textContent = script[1].description;
+
+// setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
+// setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
 
 // function setAbilityScore() {
 //     let raceInfo = findById(race, userdata.race);
