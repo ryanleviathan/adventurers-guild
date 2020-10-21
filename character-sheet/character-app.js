@@ -56,6 +56,13 @@ function populateRolls(select, rolls) {
     }
 }
 
+populateRolls(strOptions, rolls);
+populateRolls(dexOptions, rolls);
+populateRolls(conOptions, rolls);
+populateRolls(intOptions, rolls);
+populateRolls(wisOptions, rolls);
+populateRolls(chaOptions, rolls);
+
 strOptions.addEventListener('change', (e) => {
     e.preventDefault;
     let raceInfo = findById(race, userdata.race);
@@ -67,12 +74,57 @@ strOptions.addEventListener('change', (e) => {
     strOptions.style.display = 'none';
 });
 
+dexOptions.addEventListener('change', (e) => {
+    e.preventDefault;
+    let raceInfo = findById(race, userdata.race);
+    let dexBonus = raceInfo.dexterity;
+    if (!raceInfo.dexterity) {
+        dexBonus = 0;
+    }
+    strength.textContent = Number(dexBonus) + Number(e.target.value);
+    dexOptions.style.display = 'none';
+});
 
+conOptions.addEventListener('change', (e) => {
+    e.preventDefault;
+    let raceInfo = findById(race, userdata.race);
+    let conBonus = raceInfo.constitution;
+    if (!raceInfo.constitution) {
+        conBonus = 0;
+    }
+    constitution.textContent = Number(conBonus) + Number(e.target.value);
+    conOptions.style.display = 'none';
+});
 
+intOptions.addEventListener('change', (e) => {
+    e.preventDefault;
+    let raceInfo = findById(race, userdata.race);
+    let intBonus = raceInfo.intelligence;
+    if (!raceInfo.intelligence) {
+        intBonus = 0;
+    }
+    intelligence.textContent = Number(intBonus) + Number(e.target.value);
+    intOptions.style.display = 'none';
+});
 
-populateRolls(strOptions, rolls);
-populateRolls(dexOptions, rolls);
-populateRolls(conOptions, rolls);
-populateRolls(intOptions, rolls);
-populateRolls(wisOptions, rolls);
-populateRolls(chaOptions, rolls);  
+wisOptions.addEventListener('change', (e) => {
+    e.preventDefault;
+    let raceInfo = findById(race, userdata.race);
+    let wisBonus = raceInfo.wisdom;
+    if (!raceInfo.wisdom) {
+        wisBonus = 0;
+    }
+    wisdom.textContent = Number(wisBonus) + Number(e.target.value);
+    wisOptions.style.display = 'none';
+});
+
+chaOptions.addEventListener('change', (e) => {
+    e.preventDefault;
+    let raceInfo = findById(race, userdata.race);
+    let chaBonus = raceInfo.charisma;
+    if (!raceInfo.charisma) {
+        chaBonus = 0;
+    }
+    charisma.textContent = Number(chaBonus) + Number(e.target.value);
+    chaOptions.style.display = 'none';
+});
