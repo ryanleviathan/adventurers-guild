@@ -36,16 +36,23 @@ const speed = document.getElementById('speed');
 // roll display
 const rollOne = document.getElementById('rollOne');
 rollOne.textContent = userdata.rolls[0].value;
+rollOne.value = userdata.rolls[0].value;
 const rollTwo = document.getElementById('rollTwo');
 rollTwo.textContent = userdata.rolls[1].value;
+rollTwo.value = userdata.roll[1].value;
 const rollThree = document.getElementById('rollThree');
 rollThree.textContent = userdata.rolls[2].value;
+rollThree.value = userdata.roll[2].value;
 const rollFour = document.getElementById('rollFour');
 rollFour.textContent = userdata.rolls[3].value;
+rollFour.value = userdata.rolls[3].value
 const rollFive = document.getElementById('rollFive');
 rollFive.textContent = userdata.rolls[4].value;
+rollFive.value = userdata.rolls[4].value
 const rollSix = document.getElementById('rollSix');
 rollSix.textContent = userdata.rolls[5].value;
+rollSix.value = userdata.rolls[5].value;
+
 
 //albilty modifier setting
 function populateRolls(select, rolls) {
