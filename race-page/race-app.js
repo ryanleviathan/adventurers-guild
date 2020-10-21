@@ -1,4 +1,5 @@
 import raceData from '../data/race.js';
+import script from '../data/wizard-Script.js';
 import { USER } from '../utils.js';
 import { findById, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 
@@ -8,6 +9,8 @@ const wizardDialogBox = document.getElementById('dialog');
 const button = document.getElementById('button');
 
 populateRace(raceData);
+
+wizardDialogBox.textContent = script[5].description;
 
 function populateRace() {
     radios[0].value = raceData[0].id;

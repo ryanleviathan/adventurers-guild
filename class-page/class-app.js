@@ -1,4 +1,5 @@
 import classData from '../data/class.js';
+import script from '../data/wizard-Script.js';
 import { USER } from '../utils.js';
 import { findById, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 
@@ -37,6 +38,8 @@ function populateClass(classData) {
 }
 
 populateClass(classData);
+
+dialogue.textContent = script[6].description;
 
 //radios will pull class data and populate wizard dialogue & avatar sections with relevant information
 for (let i = 0; i < radios.length; i++) {
