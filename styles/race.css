@@ -10,6 +10,15 @@
 
 
 }
+
+.races:hover {
+
+    transform: scale(1.2);
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 15%;
+
+
+}
 .dialog {
     position: relative;
     width: 580px;
@@ -52,6 +61,7 @@
     
     margin-left: -30%;
     margin-right: 55%;
+    justify-content: space-around;
     
 
 }
@@ -82,9 +92,9 @@ button {
 
 .footer {
 
-    margin-top: 30%;
-    margin-bottom: 65%;
-    margin-left: 30%;
+    margin-top: 40%;
+    margin-bottom: 85%;
+    margin-left: 13%;
     
     
 }
