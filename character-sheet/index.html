@@ -9,38 +9,6 @@
 </head>
 
 <body>
-    <section class="statAssignBox">
-        <section class="pick">
-            <div>
-                <select id="strOptions"></select>
-            </div>
-        </section>
-        <section class="pick">
-            <div>
-                <select id="dexOptions"></select>
-            </div>
-        </section>
-        <section class="pick">
-            <div>
-                <select id="conOptions"></select>
-            </div>
-        </section>
-        <section class="pick">
-            <div>
-                <select id="intOptions"></select>
-            </div>
-        </section>
-        <section class="pick">
-            <div>
-                <select id="wisOptions"></select>
-            </div>
-        </section>
-        <section class="pick">
-            <div>
-                <select id="chaOptions"></select>
-            </div>
-        </section>
-    </section>
     <section id="character-Sheet" class="character-sheet">
         <section class="sectionOne">
             <section class="attb-skill">
@@ -73,9 +41,9 @@
                 </section>
                 <section class="skills-prof"></section>
             </section>
-
             <section class="percep-prof"></section>
         </section>
+
         <section class="sectionTwo">
             <section class="class-race"></section>
             <section class="ac-int-spd">
@@ -104,43 +72,48 @@
             <section class="featuresTraits"></section>
         </section>
     </section>
-    <section id="rolls-display" class="rolls-display">
 
+    <section id="rolls-display" class="rolls-display">
+        
         <section class="rollRowOne">
             <label>
-                <input name="roll" type="radio" class="rollOne">
-                <section id="rollOne">1</section>
+                <input name="roll" type="radio" class="rollOne" id="roll-one">
+                <section id="roll-one-output"></section>
                 </input>
             </label>
             <label>
-                <input name="roll" type="radio" class="rollOne">
-                <section id="rollTwo">2</section>
+                <input name="roll" type="radio" class="rollOne" id="roll-two">
+                <section id="roll-two-output"></section>
                 </input>
             </label>
             <label>
-                <input type="radio" name="roll" class="rollOne">
-                <section id="rollThree">3</section>
+                <input type="radio" name="roll" class="rollOne" id="roll-three">
+                <section id="roll-three-output"></section>
                 </input>
             </label>
         </section>
         <section class="rollRowTwo">
             <label>
-                <input name="roll" type="radio" class="rollOne">
-                <section id="rollFour">4</section>
+                <input name="roll" type="radio" class="rollOne" id="roll-four">
+                <section id="roll-four-output"></section>
                 </input>
             </label>
             <label>
-                <input name="roll" type="radio" class="rollOne">
-                <section id="rollFive">5</section>
+                <input name="roll" type="radio" class="rollOne" id="roll-five">
+                <section id="roll-five-output"></section>
                 </input>
             </label>
             <label>
-                <input name="roll" type="radio" class="rollOne" id="rollSix">
-                <section>6</section>
+                <input name="roll" type="radio" class="rollOne" id="roll-six">
+                <section id="roll-six-output"></section>
                 </input>
             </label>
         </section>
     </section>
+    <div >
+        <section id="dialog" class="dialog"> wizard dialog</section>
+        <img src="../assets/html-assets/wizard-sprite.png" class="wizard" id="wizard">
+    </div>
 </body>
 <script type="module" src="character-app.js"></script>
 

@@ -2,11 +2,11 @@ import { findById, getFromLocalStorage, setInLocalStorage, USER } from '../utils
 import race from '../data/race.js';
 import classes from '../data/class.js';
 // Pull from localStorage
-const userdata = getFromLocalStorage(USER);
-const rolls = userdata.rolls;
-console.log(rolls);
+const userData = getFromLocalStorage(USER);
+const rolls = userData.rolls;
 
 //Attributes from DOM
+const dialog = document.getElementById('dialog');
 const strength = document.getElementById('str');
 const strengthMod = document.getElementById('strMod');
 const dexterity = document.getElementById('dex');
@@ -20,127 +20,84 @@ const wisdomMod = document.getElementById('wisMod');
 const charisma = document.getElementById('cha');
 const charismaMod = document.getElementById('chaMod');
 
-//drop down options
-const strOptions = document.getElementById('strOptions');
-const dexOptions = document.getElementById('dexOptions');
-const conOptions = document.getElementById('conOptions');
-const intOptions = document.getElementById('intOptions');
-const wisOptions = document.getElementById('wisOptions');
-const chaOptions = document.getElementById('chaOptions');
 
 // AC Initiative and Speed from DOM
 const armorClass = document.getElementById('ac');
 const initiative = document.getElementById('initiative');
 const speed = document.getElementById('speed');
 
+//Wizard dialog intializing
+const userClass = findById(classes, userData.userClass);
+const primAbility = userClass.primaryAbility;
+
+dialog.textContent = `Welcome to the character sheet page! Based on your selections you are an ${userData.race}!
+Your class is a ${userData.userClass}. Your primary ability ${primAbility}.`;
+
+
+
+
 // roll display
-const rollOne = document.getElementById('rollOne');
-rollOne.textContent = userdata.rolls[0].value;
-rollOne.value = userdata.rolls[0].value;
-const rollTwo = document.getElementById('rollTwo');
-rollTwo.textContent = userdata.rolls[1].value;
-rollTwo.value = userdata.roll[1].value;
-const rollThree = document.getElementById('rollThree');
-rollThree.textContent = userdata.rolls[2].value;
-rollThree.value = userdata.roll[2].value;
-const rollFour = document.getElementById('rollFour');
-rollFour.textContent = userdata.rolls[3].value;
-rollFour.value = userdata.rolls[3].value
-const rollFive = document.getElementById('rollFive');
-rollFive.textContent = userdata.rolls[4].value;
-rollFive.value = userdata.rolls[4].value
-const rollSix = document.getElementById('rollSix');
-rollSix.textContent = userdata.rolls[5].value;
-rollSix.value = userdata.rolls[5].value;
+const rollOneText = document.getElementById('roll-one-output');
+const rollOneValue = document.getElementById('roll-one');
+rollOneText.textContent = userData.rolls[0].value;
+rollOneValue.value = userData.rolls[0].value;
 
+const rollTwoText = document.getElementById('roll-two-output');
+const rollTwoValue = document.getElementById('roll-two');
+rollTwoText.textContent = userData.rolls[1].value;
+rollTwoValue.value = userData.rolls[1].value;
 
+const rollThreeText = document.getElementById('roll-three-output');
+const rollThreeValue = document.getElementById('roll-three');
+rollThreeText.textContent = userData.rolls[2].value;
+rollThreeValue.value = userData.rolls[2].value;
+
+const rollFourText = document.getElementById('roll-four-output');
+const rollFourValue = document.getElementById('roll-four');
+rollFourText.textContent = userData.rolls[3].value;
+rollFourValue.value = userData.rolls[3].value;
+
+const rollFiveText = document.getElementById('roll-five-output');
+const rollFiveValue = document.getElementById('roll-five');
+rollFiveText.textContent = userData.rolls[4].value;
+rollFiveValue.value = userData.rolls[4].value;
+
+const rollSixText = document.getElementById('roll-six-output');
+const rollSixValue = document.getElementById('roll-six');
+rollSixText.textContent = userData.rolls[5].value;
+rollSixValue.value = userData.rolls[5].value;
+
+const radios = document.querySelectorAll('input');
+console.log(radios);
+
+// function setAbilityScore() {
+//     let raceInfo = findById(race, userdata.race);
+//     let dexBonus = raceInfo.dexterity;
+//     if (!raceInfo.dexterity) {
+//             dexBonus = 0;
+//     }
+// }
 //albilty modifier setting
-function populateRolls(select, rolls) {
-    for (let i = 0; i < rolls.length; i++) {
-        const option = document.createElement('option');
-        option.textContent = rolls[i].value;
-        option.value = rolls[i].value;
-        option.id = rolls[i].id;
-        select.append(option);
-    }
-}
-
-populateRolls(strOptions, rolls);
-populateRolls(dexOptions, rolls);
-populateRolls(conOptions, rolls);
-populateRolls(intOptions, rolls);
-populateRolls(wisOptions, rolls);
-populateRolls(chaOptions, rolls);
-
-strOptions.addEventListener('change', (e) => {
-    let raceInfo = findById(race, userdata.race);
-    let strBonus = raceInfo.strength;
-    if (!raceInfo.strength) {
-        strBonus = 0;
-    }
+// dexOptions.addEventListener('change', (e) => {
+        //     }
+//     dexterity.textContent = Number(dexBonus) + Number(e.target.value);
+//     dexOptions.style.display = 'none';
+// });
 
 
-    // console.log(e.target.getAttribute('id'));
-    // const filteredRolls = rolls.filter(item => {
-    //     return item.id !== e.target.id;
-    // });
+// function populateRolls(select, rolls) {
+//     for (let i = 0; i < rolls.length; i++) {
+//         const option = document.createElement('option');
+//         option.textContent = rolls[i].value;
+//         option.value = rolls[i].value;
+//         option.id = rolls[i].id;
+//         select.append(option);
+//     }
+// }
 
-    strength.textContent = Number(strBonus) + Number(e.target.value);
-    // strOptions.style.display = 'none';
-
-});
-
-dexOptions.addEventListener('change', (e) => {
-    e.preventDefault;
-    let raceInfo = findById(race, userdata.race);
-    let dexBonus = raceInfo.dexterity;
-    if (!raceInfo.dexterity) {
-        dexBonus = 0;
-    }
-    dexterity.textContent = Number(dexBonus) + Number(e.target.value);
-    dexOptions.style.display = 'none';
-});
-
-conOptions.addEventListener('change', (e) => {
-    e.preventDefault;
-    let raceInfo = findById(race, userdata.race);
-    let conBonus = raceInfo.constitution;
-    if (!raceInfo.constitution) {
-        conBonus = 0;
-    }
-    constitution.textContent = Number(conBonus) + Number(e.target.value);
-    conOptions.style.display = 'none';
-});
-
-intOptions.addEventListener('change', (e) => {
-    e.preventDefault;
-    let raceInfo = findById(race, userdata.race);
-    let intBonus = raceInfo.intelligence;
-    if (!raceInfo.intelligence) {
-        intBonus = 0;
-    }
-    intelligence.textContent = Number(intBonus) + Number(e.target.value);
-    intOptions.style.display = 'none';
-});
-
-wisOptions.addEventListener('change', (e) => {
-    e.preventDefault;
-    let raceInfo = findById(race, userdata.race);
-    let wisBonus = raceInfo.wisdom;
-    if (!raceInfo.wisdom) {
-        wisBonus = 0;
-    }
-    wisdom.textContent = Number(wisBonus) + Number(e.target.value);
-    wisOptions.style.display = 'none';
-});
-
-chaOptions.addEventListener('change', (e) => {
-    e.preventDefault;
-    let raceInfo = findById(race, userdata.race);
-    let chaBonus = raceInfo.charisma;
-    if (!raceInfo.charisma) {
-        chaBonus = 0;
-    }
-    charisma.textContent = Number(chaBonus) + Number(e.target.value);
-    chaOptions.style.display = 'none';
-});
+// populateRolls(strOptions, rolls);
+// populateRolls(dexOptions, rolls);
+// populateRolls(conOptions, rolls);
+// populateRolls(intOptions, rolls);
+// populateRolls(wisOptions, rolls);
+// populateRolls(chaOptions, rolls);
