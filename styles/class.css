@@ -3,41 +3,36 @@
         
     width: 210px;
     height: 180px;
-    margin-left: 46%;
-    margin-top: -37%;
+    margin-left: 65%;
+    margin-top: -105%;
 
 
 
 }
-
-.classes:hover {
-
-    transform: scale(1.2);
-    box-shadow:  3px 3px 3px 3px black;
-    border-radius: 15%;
-    opacity: 1;
-
-
+.left-body {
+    
+    margin-top: 5%;
+    margin-right: 25%;
+    justify-content: space-around;
 }
+
 
 .dialog {
     position: relative;
-    width: 600px;
+    width: 580px;
     height: 900px;
     background: yellow;
     -webkit-border-radius: 15px;
     -moz-border-radius: 10px;
     border-radius: 40px;
-    margin-left: 105%;
-    margin-top: -110%;
+    margin-right: 10%;
+    margin-bottom: 38%;
     box-shadow: black 8px 8px;
     font-size: 1.5em;
     font-family: cursive;
     text-align: center;
     font-style: italic;
     font-weight: bold;
-    
-
 }
 
 .dialog:after {
@@ -52,6 +47,24 @@
     left: 200px;
     
     
+}
+.wizard {
+
+    margin-top: 30%;
+    margin-left: 135%;
+    height: 500px;
+    width: 330px;
+}
+
+
+.classes:hover {
+
+    transform: scale(1.2);
+    box-shadow:  3px 3px 3px 3px black;
+    border-radius: 15%;
+    opacity: 1;
+
+
 }
 label {
 
@@ -73,34 +86,25 @@ h2 {
     
 }
 
-.left-body {
-
-    margin-left: -32%;
-    margin-right: 20%;
-}
-
 
 .classes {
 
-    height: 250px;
+    position: relative;
+    justify-content: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 240px;
+    width: 160px;
     opacity: .5;
 
-
 }
 
 
-
-.wizard {
-
-    margin-left: 135%;
-    height: 500px;
-    width: 330px;
-    
-   
-}
 
 button {
 
+    margin-top: 70%;
+    margin-right: -10%;
     background-color: red;
     width: 500px;
     height: 50px;

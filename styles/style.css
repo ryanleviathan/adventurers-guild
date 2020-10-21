@@ -47,14 +47,7 @@ main {
 
 
 
-.wizard {
 
-    margin-left: 60%;
-    height: 500px;
-    width: 330px;
-    
-   
-}
 
 
 
@@ -79,16 +72,7 @@ section {
    
 }
 
-.races {
-    position: relative;
-    justify-content: center;
-    margin-right: 5%;
-    margin-left: 5%;
-    height: 250px;
-    width: 180px;
-    opacity: .5;
 
-}
 
 #list li {
     display: inline;
