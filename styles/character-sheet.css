@@ -123,16 +123,22 @@ body {
 span , p {
     margin-left: .5em;
 }
-:checked {
+:checked + section {
     border: solid blue 5px;
     background-color: blue;
-    text-decoration: ;
 } 
-.rollOne:hover{
+/* .rollOne:hover{
     transform: scale(1.2);
     box-shadow:  5px 5px 5px 5px black;
     border-radius: 15%;
     opacity: 1;
+} */
+#radios {
+    transform: scale(1.2);
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 15%;
+    opacity: 1;
+
 }
 
 input {
