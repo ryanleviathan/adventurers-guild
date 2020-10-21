@@ -112,7 +112,8 @@ section {
 .races {
     position: flex;
     justify-content: centers;
-    height: 280px;
+    height: 250px;
+    width: 180px;
     opacity: .5;
 
 }
