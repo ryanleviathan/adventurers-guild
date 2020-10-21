@@ -15,6 +15,7 @@
     transform: scale(1.2);
     box-shadow:  3px 3px 3px 3px black;
     border-radius: 15%;
+    opacity: 1;
 
 
 }
@@ -63,6 +64,7 @@
 .classes {
 
     height: 250px;
+    opacity: .5;
 
 
 }
