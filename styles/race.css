@@ -11,50 +11,16 @@
 
 }
 
-.races:hover {
-
-    transform: scale(1.2);
-    box-shadow:  5px 5px 5px 5px black;
-    border-radius: 15%;
-    opacity: 1;
+.left-body {
+    
+    
+    margin-top: 10%;
+    margin-left: -10%;
+    margin-right: 35%;
+    justify-content: space-around;
     
 
-
 }
-
-label {
-
-    position: relative;
-    width: 100%;
-    color: yellow;
-    font-family: papyrus;
-    text-shadow: black 1px 1px;
-    font-size: .8em;
-
-}
-
-h2 {
-
-    position: absolute;
-    top: -70px;
-    left: 0;
-    width: 100%;
-}
-
-
-
-
-.content:hover {
-
-    opacity: 1;
-    transform: translateY(250px);
-    -webkit-transform: translateY(250px);
-
-} */
-
-
-
-
 .dialog {
     position: relative;
     width: 580px;
@@ -63,8 +29,7 @@ h2 {
     -webkit-border-radius: 15px;
     -moz-border-radius: 10px;
     border-radius: 40px;
-    margin-left: 90%;
-    margin-top: -85%;
+    margin-left: 50%;
     box-shadow: black 8px 8px;
     font-size: 1.5em;
     font-family: cursive;
@@ -90,17 +55,40 @@ h2 {
 }
 
 
+.races:hover {
 
-.left-body {
+    transform: scale(1.2);
+    box-shadow:  5px 5px 5px 5px black;
+    border-radius: 15%;
+    opacity: 1;
     
-    
-    
-    margin-left: -30%;
-    margin-right: 55%;
-    justify-content: space-around;
-    
+
 
 }
+
+label {
+
+   
+    position: relative;
+    width: 100%;
+    color: yellow;
+    font-family: papyrus;
+    text-shadow: black 1px 1px;
+    font-size: .9em;
+    
+}
+
+h2 {
+
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    
+}
+
+
+
 
 .wizard {
 

@@ -53,6 +53,25 @@
     
     
 }
+label {
+
+    position: relative;
+    width: 100%;
+    color: yellow;
+    font-family: papyrus;
+    text-shadow: black 1px 1px;
+    font-size: .8em;
+    
+}
+
+h2 {
+
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    
+}
 
 .left-body {
 
