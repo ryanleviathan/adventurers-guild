@@ -57,8 +57,13 @@ function populateRolls(select, rolls) {
 }
 
 populateRolls(strOptions, rolls);
-populateRolls(dexOptions, rolls); 
-populateRolls(conOptions, rolls); 
-populateRolls(intOptions, rolls); 
-populateRolls(wisOptions, rolls); 
-populateRolls(chaOptions, rolls);  
+
+populateRolls(dexOptions, rolls);
+
+populateRolls(conOptions, rolls);
+
+populateRolls(intOptions, rolls);
+
+populateRolls(wisOptions, rolls);
+
+populateRolls(chaOptions, rolls);
