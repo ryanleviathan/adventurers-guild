@@ -51,7 +51,7 @@ nameButton.addEventListener('click', () => {
 
 let rollTracker = [];
 let rollsRemaining = 6;
-let rollsToPush = []
+let rollsToPush = [];
 
 roll.addEventListener('click', () => {
     diceOne.value = Number(rollDice());
