@@ -40,8 +40,9 @@ body {
     background-image: url(../assets/html-assets/character-sheet.png);
     background-repeat: no-repeat;
     opacity: .9;
-    margin-right: 7em;
-    margin-top:10em;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top:2em;
     border: solid lightslategrey 2px;
     
     
@@ -143,4 +144,35 @@ span , p {
 
 input {
     display: none;
+}
+
+.dialog {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: yellow;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 10px;
+    border-radius: 40px;
+    box-shadow: black 8px 8px;
+    font-size: 1.5em;
+    font-family: cursive;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.dialog:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 102px 22px 0;
+    border-color: yellow transparent;
+    display: block;
+    z-index: 1;
+    bottom: -102px;
+    left: 310px;
+    
+    
 }
