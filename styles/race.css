@@ -17,9 +17,44 @@
     box-shadow:  5px 5px 5px 5px black;
     border-radius: 15%;
     opacity: 1;
+    
 
 
 }
+
+label {
+
+    position: relative;
+    width: 100%;
+    color: yellow;
+    font-family: papyrus;
+    text-shadow: black 1px 1px;
+    font-size: .8em;
+
+}
+
+h2 {
+
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+}
+
+
+
+
+.content:hover {
+
+    opacity: 1;
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+
+} */
+
+
+
+
 .dialog {
     position: relative;
     width: 580px;
