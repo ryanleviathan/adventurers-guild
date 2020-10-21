@@ -60,8 +60,9 @@ body {
 }
 .attributes {
     display: grid;
-    grid-template-rows: 26% 13% 13% 12% 12% 13%;
+    grid-template-rows: 25% 12% 13% 12% 12% 13%;
     text-align: center;
+    line-height: .5em;
     
 }
 .skills-prof {
