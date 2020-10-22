@@ -1,9 +1,8 @@
-import { findById, getFromLocalStorage, setInLocalStorage, USER, numberImage, imageArray } from '../utils.js';
+import { findById, getFromLocalStorage, USER, imageArray } from '../utils.js';
 import race from '../data/race.js';
 import classes from '../data/class.js';
 // Pull from localStorage
 const userData = getFromLocalStorage(USER);
-const rolls = userData.rolls;
 
 //Attributes from DOM
 const dialog = document.getElementById('dialog');
@@ -41,9 +40,9 @@ rollOneImg.src = imageArray[Number(rollOneValue.value) - 1];
 
 const rollTwoImg = document.getElementById('roll-two-output');
 const rollTwoValue = document.getElementById('roll-two');
-
 rollTwoValue.value = userData.rolls[1].value;
 rollTwoImg.src = imageArray[Number(rollTwoValue.value) - 1];
+
 const rollThreeImg = document.getElementById('roll-three-output');
 const rollThreeValue = document.getElementById('roll-three');
 rollThreeValue.value = userData.rolls[2].value;
@@ -51,14 +50,14 @@ rollThreeImg.src = imageArray[Number(rollThreeValue.value) - 1];
 
 const rollFourImg = document.getElementById('roll-four-output');
 const rollFourValue = document.getElementById('roll-four');
-
 rollFourValue.value = userData.rolls[3].value;
 rollFourImg.src = imageArray[Number(rollFourValue.value) - 1];
+
 const rollFiveImg = document.getElementById('roll-five-output');
 const rollFiveValue = document.getElementById('roll-five');
-
 rollFiveValue.value = userData.rolls[4].value;
 rollFiveImg.src = imageArray[Number(rollFiveValue.value) - 1];
+
 const rollSixImg = document.getElementById('roll-six-output');
 const rollSixValue = document.getElementById('roll-six');
 rollSixValue.value = userData.rolls[5].value;
