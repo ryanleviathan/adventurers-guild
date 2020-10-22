@@ -39,8 +39,6 @@ main {
     margin-bottom: 0%;
     margin-top: -45%;
     margin-left: 10%;
-    
-
     }
 
 
@@ -78,6 +76,7 @@ section {
     margin-bottom:2%;
     margin-top: 5%;
     margin-left: 10%
+    
 
 }
 
@@ -184,4 +183,29 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  .name {
+    height: 30px;
+    width: 200px;
+    margin-bottom: 10px
+  }
+
+  .button {
+      height: 30px;
+      background-color: red;
+      color: white;
+      font-family: papyrus;
+      margin-bottom: 10px;
+      border-radius: 5px;
+  }
+
+  #roll {
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-family: papyrus;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
   }
