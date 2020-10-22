@@ -19,7 +19,11 @@ const wisdom = document.getElementById('wis');
 const wisdomMod = document.getElementById('wisMod');
 const charisma = document.getElementById('cha');
 const charismaMod = document.getElementById('chaMod');
+const button = document.getElementById('button');
 
+button.addEventListener('click', () => {
+    document.location = '../results-page/index.html';
+});
 
 // AC Initiative and Speed from DOM
 const armorClass = document.getElementById('ac');

@@ -151,6 +151,23 @@ input {
     display: none;
 }
 
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 70% 10%;
+}
+
+.button {
+    display: flex;
+    margin-top: 10px;
+    background-color: red;
+    color: yellow;
+    font-style: italic;
+    font-size: 2em;
+    font-family: papyrus;
+}
+
 .dialog {
     position: relative;
     width: 500px;
