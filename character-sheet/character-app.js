@@ -36,53 +36,62 @@ dialog.textContent = `Welcome to the character sheet page! Based on your selecti
 const rollOneImg = document.getElementById('roll-one-output');
 const rollOneValue = document.getElementById('roll-one');
 rollOneValue.value = userData.rolls[0].value;
-rollOneImg.src = imageArray[Number(rollOneValue.value) + 1];
+rollOneImg.src = imageArray[Number(rollOneValue.value) - 1];
 
 
 const rollTwoImg = document.getElementById('roll-two-output');
 const rollTwoValue = document.getElementById('roll-two');
 
 rollTwoValue.value = userData.rolls[1].value;
-rollTwoImg.src = imageArray[Number(rollTwoValue.value) + 1];
+rollTwoImg.src = imageArray[Number(rollTwoValue.value) - 1];
 const rollThreeImg = document.getElementById('roll-three-output');
 const rollThreeValue = document.getElementById('roll-three');
 rollThreeValue.value = userData.rolls[2].value;
-rollThreeImg.src = imageArray[Number(rollThreeValue.value) + 1];
+rollThreeImg.src = imageArray[Number(rollThreeValue.value) - 1];
 
 const rollFourImg = document.getElementById('roll-four-output');
 const rollFourValue = document.getElementById('roll-four');
 
 rollFourValue.value = userData.rolls[3].value;
-rollFourImg.src = imageArray[Number(rollFourValue.value) + 1];
+rollFourImg.src = imageArray[Number(rollFourValue.value) - 1];
 const rollFiveImg = document.getElementById('roll-five-output');
 const rollFiveValue = document.getElementById('roll-five');
 
 rollFiveValue.value = userData.rolls[4].value;
-rollFiveImg.src = imageArray[Number(rollFiveValue.value) + 1];
+rollFiveImg.src = imageArray[Number(rollFiveValue.value) - 1];
 const rollSixImg = document.getElementById('roll-six-output');
 const rollSixValue = document.getElementById('roll-six');
 rollSixValue.value = userData.rolls[5].value;
-rollSixImg.src = imageArray[Number(rollSixValue.value) + 1];
+rollSixImg.src = imageArray[Number(rollSixValue.value) - 1];
 
 const radios = document.querySelectorAll('input');
+const abilities = document.querySelectorAll('.abilities');
+// console.log(abilities);
+// console.log(radios);
 
-
-
-
-export function loopRadios() {
+export function loopRadios(abilities) {
     for (let i = 0; i < radios.length; i++) {
-        radio[i].addEventListener('click', (e) => {
-            console.log(e.target.value);
-            return e.target.value;
+        const radio = radios[i];
+        radio.addEventListener('click', (e) => {
+            const checkedValue = e.target.value;
+            if (abilities[0].textContent === 'str') {
+                abilities[0].textContent = checkedValue;
+
+            } else if (abilities[1].textContent === 'dex')
+                abilities[1].textContent = checkedValue;
+                
         });
+        console.log();
     }
 }
+loopRadios(abilities);
 
-function renderStr() {
-    let strAbil = userData.rolls.value;
-
-    strength.textContent = strAbil;
-}
+// function renderStr() {
+//     let strAbil = userData.rolls.value;
+//     loopRadios();
+//     if ()
+//     strength.textContent = strAbil;
+// }
 
 
 
