@@ -76,12 +76,62 @@ export function loopRadios(abilities) {
             const checkedValue = e.target.value;
             if (abilities[0].textContent === 'str') {
                 abilities[0].textContent = checkedValue;
-
-            } else if (abilities[1].textContent === 'dex')
+                // need to remove radio display
+                let raceInfo = findById(race, userData.race);
+                let strBonus = raceInfo.strength;
+                if (!raceInfo.strength) {
+                    strBonus = 0;
+                }
+                strength.textContent = Number(strBonus) + Number(checkedValue);
+    
+            } else if (abilities[1].textContent === 'dex') {
                 abilities[1].textContent = checkedValue;
-                
+                // need to remove radio display
+                let raceInfo = findById(race, userData.race);
+                let dexBonus = raceInfo.dexterity;
+                if (!raceInfo.dexterity) {
+                    dexBonus = 0;
+                }
+                dexterity.textContent = Number(dexBonus) + Number(checkedValue);
+
+            } else if (abilities[2].textContent === 'con') {
+                abilities[2].textContent = checkedValue;
+                // need to remove radio display
+                let raceInfo = findById(race, userData.race);
+                let conBonus = raceInfo.constitution;
+                if (!raceInfo.constitution) {
+                    conBonus = 0;
+                }
+                constitution.textContent = Number(conBonus) + Number(checkedValue); 
+
+            } else if (abilities[3].textContent === 'int') {
+                abilities[3].textContent = checkedValue;
+                let raceInfo = findById(race, userData.race);
+                let intBonus = raceInfo.intelligence;
+                if (!raceInfo.intelligence) {
+                    intBonus = 0;
+                }
+                intelligence.textContent = Number(intBonus) + Number(checkedValue);
+
+            } else if (abilities[4].textContent === 'wis') {
+                abilities[4].textContent = checkedValue;
+                let raceInfo = findById(race, userData.race);
+                let wisBonus = raceInfo.wisdom;
+                if (!raceInfo.wisdom) {
+                    wisBonus = 0;
+                }
+                wisdom.textContent = Number(wisBonus) + Number(checkedValue);
+
+            } else if (abilities[5].textContent === 'cha') {
+                abilities[5].textContent = checkedValue;
+                let raceInfo = findById(race, userData.race);
+                let chaBonus = raceInfo.charisma;
+                if (!raceInfo.charisma) {
+                    chaBonus = 0;
+                }
+                charisma.textContent = Number(chaBonus) + Number(checkedValue);
+            }
         });
-        console.log();
     }
 }
 loopRadios(abilities);

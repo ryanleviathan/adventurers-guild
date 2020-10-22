@@ -35,7 +35,7 @@ export default [
     {
         id: '005',
         title: 'the rolls',
-        description: 'Very good! Now that we have these number we can move on to the next step!'
+        description: 'Very good! Now that we have your dice rolls we can move on to the next step!'
 
     },
     {
