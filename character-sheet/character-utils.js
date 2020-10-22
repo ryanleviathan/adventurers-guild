@@ -1,4 +1,6 @@
-import { findById } from '../.utils.js';
+import classes from '../data/class.js';
+import { findById, getFromLocalStorage, USER } from '../utils.js';
+// import race from '../data/race.js';
 
 export function modifier(attribute) {
     const modVal = Number(attribute.textcontent);
@@ -29,6 +31,39 @@ export function modifier(attribute) {
     }
 }
 
-export function armorClass(userData, dexMod) {
-    const
+const userData = getFromLocalStorage(USER);
+const userClass = findById(classes, userData.userClass);
+const dialog = document.getElementById('dialog');
+
+
+export function wizDialogIntro() {
+    const primAbility = userClass.primaryAbility;
+
+    setTimeout(() => { dialog.textContent = `Welcome to the character sheet page! We'll start by putting your name, ${userData.name}, in the character's name box at the top of your character sheet.`; }, 0);
+
+    setTimeout(() => { dialog.textContent = `Now, we'll place your class in the top box to the right of your name.`; }, 8000);
+
+    setTimeout(() => { dialog.textContent = `Now, we'll place your race in the box below your class.`; }, 12000);
+
+    setTimeout(() => { dialog.textContent = `Now we'll select your Ability Scores. Based on your selections you are a ${userData.race} and your class is ${userData.userClass}. Your primary ability is ${primAbility}.`; }, 16000);
+
+    setTimeout(() => { dialog.textContent = `${userData.name}, you'll be using those dice rolls I saved for you earlier. The value of your rolls will become your Ability Scores! Before we do that, first we need to understand what the stats do.`; }, 26000);
+
+    setTimeout(() => { dialog.textContent = `Strength is being able to crush a tomato.`; }, 36000);
+
+    setTimeout(() => { dialog.textContent = `Dexterity is being able to dodge a tomato.`; }, 41000);
+
+    setTimeout(() => { dialog.textContent = `Constitution is being able to eat a bad tomato.`; }, 46000);
+
+    setTimeout(() => { dialog.textContent = `Intelligence is knowing a tomato is a fruit.`; }, 51000);
+
+    setTimeout(() => { dialog.textContent = `Wisdom is knowing not to put a tomato in a fruit salad.`; }, 56000);
+
+    setTimeout(() => { dialog.textContent = `Charisma is being able to sell a tomato-based fruit salad.`; }, 61000);
+
+    if (userData.userClass === 'bard') {
+        setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 66000); setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 71000);
+    } else if (!userData.userClass === 'bard') {
+        setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 66000);
+    }
 }

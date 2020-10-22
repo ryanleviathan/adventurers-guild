@@ -41,12 +41,12 @@ export default [
     {
         id: '006',
         title: 'race intro',
-        description: 'You have the privilege of being represented by one of the nine (base) races in your campaign. Each race comes with a speed value, attribute modifiers, and traits that you wills shape how you interact with the world for the rest of your campaign. Here is the list of available races. Please click on one for a brief description.'
+        description: `You have the privilege of being represented by one of the nine (base) races in the world of Forgotten Realms. Each race comes with a speed value, attribute modifiers, and traits that will shape how you interact with the world for the rest of your campaign. Here is the list of available races. Please click on one for a brief description. Once you've made your selection, click on the button below to proceed.`
 
     },
     {
         id:'007',
         title: 'class intro',
-        description: 'You will now choose between twelve different classes. Every class comes with a set amount of hit points, primary abilities, class proficiencies, starting equipment, and special features. This decision will further enhances how you interact with the world in which your campaign is set in. Please select a class so I can give a description of each class.'
+        description: `You will now choose between twelve different classes. Every class comes with a set amount of hit points, primary abilities, class proficiencies, starting equipment, and special features. This decision further enhances how you interact with the world in which your campaign is set in. Please click on one for a brief description. Once you've made your selection, click on the button below to proceed.`
     }
 ];
