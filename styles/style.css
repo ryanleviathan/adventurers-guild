@@ -113,6 +113,7 @@ input[type="radio"] {
     font-weight: bold;
     font-size: 2em;
     font-family: papyrus;
+    border-radius: 15px;
 
 
 }
