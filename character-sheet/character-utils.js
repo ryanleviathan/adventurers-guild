@@ -1,5 +1,4 @@
-
-
+import { findById } from '../.utils.js';
 
 export function modifier(attribute) {
     const modVal = Number(attribute.textcontent);
@@ -30,22 +29,6 @@ export function modifier(attribute) {
     }
 }
 
-strengthMod.textcontent = modifier(strength);
-dexterityMod.textcontent = modifier(dexterity);
-constitutionMod.textcontent = modifier(constitution);
-intelligenceMod.textcontent = modifier(intelligence);
-wisdomMod.textcontent = modifier(wisdom);
-charismaMod.textcontent = modifier(charisma);
-
-
-
-
-
 export function armorClass(userData, dexMod) {
     const
 }
-
-
-
-speed.textcontent = userData.race.speed;
-initiative.textcontent = dexterityMod.textcontent; 
