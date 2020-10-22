@@ -64,3 +64,44 @@ export const imageArray = [
 export function numberImage(image, radio) {
     image.src = imageArray[Number(radio.value) + 1];
 }
+export function numberImage(radio, img) {
+    if (radio.value === 1) {
+        img.src = '../assets/numbers/one.png';
+    } if (radio.value === 2) {
+        img.src = '../assets/numbers/two.png';
+    } if (radio.value === 3) {
+        img.src = '../assets/numbers/three.png';
+    } if (radio.value === 4) {
+        img.src = '../assets/numbers/four.png';
+    } if (radio.value === 5) {
+        img.src = '../assets/numbers/five.png';
+    } if (radio.value === 6) {
+        img.src = '../assets/numbers/six';
+    } if (radio.value === 7) {
+        img.src = '../assets/numbers/seven.png';
+    } if (radio.value === 8) {
+        img.src = '../assets/numbers/eight.png';
+    } if (radio.value === 9) {
+        img.src = '../assets/numbers/nine.png';
+    } if (radio.value === 10) {
+        img.src = '../assets/numbers/ten.png';
+    } if (radio.value === 11) {
+        img.src = '../assets/numbers/eleven.png';
+    } if (radio.value === 12) {
+        img.src = '../assets/numbers/twelve.png';
+    } if (radio.value === 13) {
+        img.src = '../assets/numbers/thirteen.png';
+    } if (radio.value === 14) {
+        img.src = '../assets/numbers/fourteen.png';
+    } if (radio.value === 15) {
+        img.src = '../assets/numbers/fifteen.png';
+    } if (radio.value === 16) {
+        img.src = '../assets/numbers/sixteen.png';
+    } if (radio.value === 17) {
+        img.src = '../assets/numbers/seventeen.png';
+    } if (radio.value === 18) {
+        img.src = '../assets/numbers/eighteen.png';
+    }
+}
+
+
