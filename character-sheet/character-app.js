@@ -77,14 +77,14 @@ setTimeout(() => { dialog.textContent = `Constitution is being able to eat a bad
 
 setTimeout(() => { dialog.textContent = `Intelligence is knowing a tomato is a fruit.`; }, 39000);
 
-setTimeout(() => { dialog.textContent = `Wisdom is knowing not to put a tomato in a fruit salad.`; }, 34000);
+setTimeout(() => { dialog.textContent = `Wisdom is knowing not to put a tomato in a fruit salad.`; }, 44000);
 
-setTimeout(() => { dialog.textContent = `Charisma is being able to sell a tomato-based fruit salad.`; }, 39000);
+setTimeout(() => { dialog.textContent = `Charisma is being able to sell a tomato-based fruit salad.`; }, 49000);
 
 if (userData.userClass === 'bard') {
-    setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 44000);
+    setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 54000);
 } else {
-    setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Stregnth stat.`; }, 49000);
+    setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 59000);
 }
 
 export function populateAbilityScores(abilities) {
