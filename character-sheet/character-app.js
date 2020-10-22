@@ -71,8 +71,7 @@ const radios = document.querySelectorAll('input');
 
 export function loopRadios() {
     for (let i = 0; i < radios.length; i++) {
-        const radio = radios[i];
-        radio.addEventListener('click', (e) => {
+        radio[i].addEventListener('click', (e) => {
             console.log(e.target.value);
             return e.target.value;
         });

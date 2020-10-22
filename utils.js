@@ -64,5 +64,3 @@ export const imageArray = [
 export function numberImage(image, radio) {
     image.src = imageArray[Number(radio.value) + 1];
 }
-
-
