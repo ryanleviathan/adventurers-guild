@@ -1,9 +1,8 @@
-import { findById, getFromLocalStorage, setInLocalStorage, USER, numberImage, imageArray } from '../utils.js';
+import { findById, getFromLocalStorage, USER, imageArray } from '../utils.js';
 import race from '../data/race.js';
 import classes from '../data/class.js';
 // Pull from localStorage
 const userData = getFromLocalStorage(USER);
-const rolls = userData.rolls;
 
 //Attributes from DOM
 const dialog = document.getElementById('dialog');
