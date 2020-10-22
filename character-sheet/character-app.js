@@ -1,6 +1,7 @@
 import { findById, getFromLocalStorage, USER, imageArray } from '../utils.js';
 import race from '../data/race.js';
 import classes from '../data/class.js';
+import script from '../data/wizard-Script.js';
 // Pull from localStorage
 const userData = getFromLocalStorage(USER);
 
