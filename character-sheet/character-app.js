@@ -67,7 +67,7 @@ rollSixImg.src = imageArray[Number(rollSixValue.value) - 1];
 const radios = document.querySelectorAll('input');
 const abilities = document.querySelectorAll('.abilities');
 
-export function loopRadios(abilities) {
+export function populateAbilityScores(abilities) {
     for (let i = 0; i < radios.length; i++) {
         const radio = radios[i];
         radio.addEventListener('click', (e) => {
@@ -136,7 +136,7 @@ export function loopRadios(abilities) {
         });
     }
 }
-loopRadios(abilities);
+populateAbilityScores(abilities);
 
 // dialog.textContent = script[1].description;
 
