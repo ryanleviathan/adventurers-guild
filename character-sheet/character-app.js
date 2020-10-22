@@ -66,17 +66,16 @@ rollSixImg.src = imageArray[Number(rollSixValue.value) - 1];
 
 const radios = document.querySelectorAll('input');
 const abilities = document.querySelectorAll('.abilities');
-// console.log(abilities);
-// console.log(radios);
 
 export function loopRadios(abilities) {
     for (let i = 0; i < radios.length; i++) {
         const radio = radios[i];
         radio.addEventListener('click', (e) => {
             const checkedValue = e.target.value;
+
             if (abilities[0].textContent === 'str') {
                 abilities[0].textContent = checkedValue;
-                // need to remove radio display
+                
                 let raceInfo = findById(race, userData.race);
                 let strBonus = raceInfo.strength;
                 if (!raceInfo.strength) {
@@ -86,7 +85,7 @@ export function loopRadios(abilities) {
     
             } else if (abilities[1].textContent === 'dex') {
                 abilities[1].textContent = checkedValue;
-                // need to remove radio display
+                
                 let raceInfo = findById(race, userData.race);
                 let dexBonus = raceInfo.dexterity;
                 if (!raceInfo.dexterity) {
@@ -96,16 +95,17 @@ export function loopRadios(abilities) {
 
             } else if (abilities[2].textContent === 'con') {
                 abilities[2].textContent = checkedValue;
-                // need to remove radio display
+                
                 let raceInfo = findById(race, userData.race);
                 let conBonus = raceInfo.constitution;
                 if (!raceInfo.constitution) {
                     conBonus = 0;
                 }
-                constitution.textContent = Number(conBonus) + Number(checkedValue); 
+                constitution.textContent = Number(conBonus) + Number(checkedValue);
 
             } else if (abilities[3].textContent === 'int') {
                 abilities[3].textContent = checkedValue;
+                
                 let raceInfo = findById(race, userData.race);
                 let intBonus = raceInfo.intelligence;
                 if (!raceInfo.intelligence) {
@@ -115,6 +115,7 @@ export function loopRadios(abilities) {
 
             } else if (abilities[4].textContent === 'wis') {
                 abilities[4].textContent = checkedValue;
+                
                 let raceInfo = findById(race, userData.race);
                 let wisBonus = raceInfo.wisdom;
                 if (!raceInfo.wisdom) {
@@ -124,6 +125,7 @@ export function loopRadios(abilities) {
 
             } else if (abilities[5].textContent === 'cha') {
                 abilities[5].textContent = checkedValue;
+                
                 let raceInfo = findById(race, userData.race);
                 let chaBonus = raceInfo.charisma;
                 if (!raceInfo.charisma) {
@@ -136,49 +138,11 @@ export function loopRadios(abilities) {
 }
 loopRadios(abilities);
 
-// function renderStr() {
-//     let strAbil = userData.rolls.value;
-//     loopRadios();
-//     if ()
-//     strength.textContent = strAbil;
-// }
-
-
-
 // dialog.textContent = script[1].description;
 
 // setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
 // setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
 
 
-// function setAbilityScore() {
-//     let raceInfo = findById(race, userdata.race);
-//     let dexBonus = raceInfo.dexterity;
-//     if (!raceInfo.dexterity) {
-//             dexBonus = 0;
-//     }
-// }
-//albilty modifier setting
-// dexOptions.addEventListener('change', (e) => {
-        //     }
-//     dexterity.textContent = Number(dexBonus) + Number(e.target.value);
-//     dexOptions.style.display = 'none';
-// });
 
 
-// function populateRolls(select, rolls) {
-//     for (let i = 0; i < rolls.length; i++) {
-//         const option = document.createElement('option');
-//         option.textContent = rolls[i].value;
-//         option.value = rolls[i].value;
-//         option.id = rolls[i].id;
-//         select.append(option);
-//     }
-// }
-
-// populateRolls(strOptions, rolls);
-// populateRolls(dexOptions, rolls);
-// populateRolls(conOptions, rolls);
-// populateRolls(intOptions, rolls);
-// populateRolls(wisOptions, rolls);
-// populateRolls(chaOptions, rolls);
