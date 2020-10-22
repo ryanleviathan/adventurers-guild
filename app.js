@@ -7,6 +7,7 @@ import { rollDice, imagePicker, attributeNumber, setInLocalStorage } from './uti
 // initialize state
 
 // set event listeners to update state and DOM
+const audio = document.getElementById('audio');
 const dialog = document.getElementById('dialog');
 const name = document.querySelector('input');
 const diceOne = document.getElementById('diceOne');
@@ -26,10 +27,18 @@ const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
+
+
 dialog.textContent = 'Welcome young adventurer! What is your name?';
 let userData;
 
+function playAudio() {
+    audio.play();
+
+}
+
 nameButton.addEventListener('click', () => {
+    playAudio();
     const userName = name.value;
     nameButton.classList.add('display');
     nameButton.style.display = 'none';
