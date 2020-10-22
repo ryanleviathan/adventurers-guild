@@ -1,4 +1,4 @@
-import { findById, getFromLocalStorage, setInLocalStorage, USER } from '../utils.js';
+import { findById, getFromLocalStorage, setInLocalStorage, USER, numberImage, imageArray } from '../utils.js';
 import race from '../data/race.js';
 import classes from '../data/class.js';
 // Pull from localStorage
@@ -33,37 +33,41 @@ const primAbility = userClass.primaryAbility;
 dialog.textContent = `Welcome to the character sheet page! Based on your selections you are a ${userData.race} and your class is a ${userData.userClass}. Your primary ability is ${primAbility}.`;
 
 // roll display
-const rollOneText = document.getElementById('roll-one-output');
+const rollOneImg = document.getElementById('roll-one-output');
 const rollOneValue = document.getElementById('roll-one');
-rollOneText.textContent = userData.rolls[0].value;
 rollOneValue.value = userData.rolls[0].value;
+rollOneImg.src = imageArray[Number(rollOneValue.value) + 1];
 
-const rollTwoText = document.getElementById('roll-two-output');
+
+const rollTwoImg = document.getElementById('roll-two-output');
 const rollTwoValue = document.getElementById('roll-two');
-rollTwoText.textContent = userData.rolls[1].value;
+
 rollTwoValue.value = userData.rolls[1].value;
-
-const rollThreeText = document.getElementById('roll-three-output');
+rollTwoImg.src = imageArray[Number(rollTwoValue.value) + 1];
+const rollThreeImg = document.getElementById('roll-three-output');
 const rollThreeValue = document.getElementById('roll-three');
-rollThreeText.textContent = userData.rolls[2].value;
 rollThreeValue.value = userData.rolls[2].value;
+rollThreeImg.src = imageArray[Number(rollThreeValue.value) + 1];
 
-const rollFourText = document.getElementById('roll-four-output');
+const rollFourImg = document.getElementById('roll-four-output');
 const rollFourValue = document.getElementById('roll-four');
-rollFourText.textContent = userData.rolls[3].value;
+
 rollFourValue.value = userData.rolls[3].value;
-
-const rollFiveText = document.getElementById('roll-five-output');
+rollFourImg.src = imageArray[Number(rollFourValue.value) + 1];
+const rollFiveImg = document.getElementById('roll-five-output');
 const rollFiveValue = document.getElementById('roll-five');
-rollFiveText.textContent = userData.rolls[4].value;
-rollFiveValue.value = userData.rolls[4].value;
 
-const rollSixText = document.getElementById('roll-six-output');
+rollFiveValue.value = userData.rolls[4].value;
+rollFiveImg.src = imageArray[Number(rollFiveValue.value) + 1];
+const rollSixImg = document.getElementById('roll-six-output');
 const rollSixValue = document.getElementById('roll-six');
-rollSixText.textContent = userData.rolls[5].value;
 rollSixValue.value = userData.rolls[5].value;
+rollSixImg.src = imageArray[Number(rollSixValue.value) + 1];
 
 const radios = document.querySelectorAll('input');
+
+
+
 
 export function loopRadios() {
     for (let i = 0; i < radios.length; i++) {
@@ -87,6 +91,7 @@ function renderStr() {
 
 // setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
 // setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
+
 
 // function setAbilityScore() {
 //     let raceInfo = findById(race, userdata.race);

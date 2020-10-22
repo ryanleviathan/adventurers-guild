@@ -113,6 +113,10 @@ body {
     align-items: center;
     text-align: center;
 }
+.roll-img {
+    height: 50px;
+    width: 50px;
+}
 
 .rollRowTwo {
     border: solid black;
@@ -124,7 +128,7 @@ body {
 span , p {
     margin-left: .5em;
 }
-:checked + section {
+:checked + img {
     border: solid blue 5px;
     background-color: blue;
 } 

@@ -41,6 +41,29 @@ export function findById(someArray, someId) {
             return item;
     }
 }
+export const imageArray = [
+    '../assets/numbers/one.png',
+    '../assets/numbers/two.png',
+    '../assets/numbers/three.png',
+    '../assets/numbers/four.png',
+    '../assets/numbers/five.png',
+    '../assets/numbers/six.png',
+    '../assets/numbers/seven.png',
+    '../assets/numbers/eight.png',
+    '../assets/numbers/nine.png',
+    '../assets/numbers/ten.png',
+    '../assets/numbers/eleven.png',
+    '../assets/numbers/twelve.png',
+    '../assets/numbers/thirteen.png',
+    '../assets/numbers/fourteen.png',
+    '../assets/numbers/fifteen.png',
+    '../assets/numbers/sixteen.png',
+    '../assets/numbers/seventeen.png',
+    '../assets/numbers/eighteen.png',
+];
+export function numberImage(image, radio) {
+    image.src = imageArray[Number(radio.value) + 1];
+}
 export function numberImage(radio, img) {
     if (radio.value === 1) {
         img.src = '../assets/numbers/one.png';
@@ -80,4 +103,5 @@ export function numberImage(radio, img) {
         img.src = '../assets/numbers/eighteen.png';
     }
 }
+
 
