@@ -1,4 +1,4 @@
-import { findById, getFromLocalStorage, USER, imageArray } from '../utils.js';
+import { findById, getFromLocalStorage, USER, imageArray, modifier } from '../utils.js';
 import race from '../data/race.js';
 import classes from '../data/class.js';
 // Pull from localStorage
@@ -74,68 +74,86 @@ export function populateAbilityScores(abilities) {
 
             if (abilities[0].textContent === 'str') {
                 abilities[0].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let strBonus = raceInfo.strength;
                 if (!raceInfo.strength) {
                     strBonus = 0;
                 }
                 strength.textContent = Number(strBonus) + Number(checkedValue);
-    
+                strengthMod.textContent = modifier(strength);
+
             } else if (abilities[1].textContent === 'dex') {
                 abilities[1].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let dexBonus = raceInfo.dexterity;
                 if (!raceInfo.dexterity) {
                     dexBonus = 0;
                 }
                 dexterity.textContent = Number(dexBonus) + Number(checkedValue);
+                dexterityMod.textContent = modifier(dexterity);
+                initiative.textContent = modifier(dexterity);
 
             } else if (abilities[2].textContent === 'con') {
                 abilities[2].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let conBonus = raceInfo.constitution;
                 if (!raceInfo.constitution) {
                     conBonus = 0;
                 }
                 constitution.textContent = Number(conBonus) + Number(checkedValue);
+                constitutionMod.textContent = modifier(constitution);
 
             } else if (abilities[3].textContent === 'int') {
                 abilities[3].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let intBonus = raceInfo.intelligence;
                 if (!raceInfo.intelligence) {
                     intBonus = 0;
                 }
                 intelligence.textContent = Number(intBonus) + Number(checkedValue);
+                intelligenceMod.textContent = modifier(intelligence);
 
             } else if (abilities[4].textContent === 'wis') {
                 abilities[4].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let wisBonus = raceInfo.wisdom;
                 if (!raceInfo.wisdom) {
                     wisBonus = 0;
                 }
                 wisdom.textContent = Number(wisBonus) + Number(checkedValue);
+                wisdomMod.textContent = modifier(wisdom);
 
             } else if (abilities[5].textContent === 'cha') {
                 abilities[5].textContent = checkedValue;
-                
+
                 let raceInfo = findById(race, userData.race);
                 let chaBonus = raceInfo.charisma;
                 if (!raceInfo.charisma) {
                     chaBonus = 0;
                 }
                 charisma.textContent = Number(chaBonus) + Number(checkedValue);
+                charismaMod.textContent = modifier(charisma);
+
             }
         });
     }
 }
 populateAbilityScores(abilities);
+const speedMod = findById(race, userData.race);
+speed.textContent = speedMod.speed;
+
+
+
+
+
+
+
+
 
 // dialog.textContent = script[1].description;
 
