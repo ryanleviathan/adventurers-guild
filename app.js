@@ -49,7 +49,6 @@ function playWizAudio(wiz) {
 
 function playAudio() {
     audio.play();
-    audio.volume = 0.2;
 }
 
 name.addEventListener('click', () => {
@@ -76,10 +75,10 @@ nameButton.addEventListener('click', () => {
 
     setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
     setTimeout(() => { playWizAudio(wiz3); }, 10000);
-
+    
     setTimeout(() => { dialog.textContent = script[3].description; }, 25000);
     setTimeout(() => { playWizAudio(wiz4); }, 25000);
-
+    
 });
 
 let rollTracker = [];
