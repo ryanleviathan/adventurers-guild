@@ -19,16 +19,26 @@ function renderLineItems(USER) {
     const tdClass = document.createElement('td');
     const ulStats = document.createElement('ul');
 
+    tr.classList = 'tr';
+
     tdName.textContent = USER.name;
+    tdName.classList = 'name';
+
     tdRace.textContent = USER.race;
+    tdRace.classList = 'race';
+
     tdClass.textContent = USER.userClass;
+    tdClass.classList = 'class';
+
     USER.rolls.forEach((item, i) => {
         const li = document.createElement('li');
         li.textContent = `${abilitiesArray[i]}: ${item.value}`;
         ulStats.append(li);
     });
+
+    ulStats.classList = 'ul';
     
-    tr.append(tdName, tdRace, tdClass, ulStats);
+    tr.append(tdName, tdClass, tdRace, ulStats);
 
     return tr;
 }

@@ -7,3 +7,46 @@
     font-size: 2em;
     font-family: papyrus;
 }
+
+tr {
+
+}
+
+table {
+    padding: 40px;
+    width: 800px;
+    height: 700px;
+    border: solid 10px white;
+    background-image: url("../assets/results-image.jpg");
+    background-image: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 25px;
+    font-family: papyrus;
+    font-size: 2em;
+    font-weight: 900;
+    margin: auto;
+}
+
+.name {
+    width: 150px;
+    text-align: center;
+    color: red;
+}
+
+.race {
+    width: 150px;
+    text-align: center;
+    color: red;
+}
+
+.class {
+    width: 150px;
+    text-align: center;
+    color: red;
+}
+
+.ul {
+    text-align: center;
+    color: red;
+}
