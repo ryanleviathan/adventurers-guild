@@ -62,8 +62,8 @@ export function wizDialogIntro() {
     setTimeout(() => { dialog.textContent = `Charisma is being able to sell a tomato-based fruit salad.`; }, 61000);
 
     if (userData.userClass === 'bard') {
-        setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 66000); setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 71000);
+        setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 66000); setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 70000);
     } else if (!userData.userClass === 'bard') {
-        setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 66000);
+        setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 71000);
     }
 }
