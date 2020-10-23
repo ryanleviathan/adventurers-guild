@@ -11,6 +11,8 @@ const button = document.getElementById('button');
 // Wizard Audio
 const wizAudio = document.getElementById('wiz-audio');
 
+const wiz6 = ('../assets/wizard-audio/006.mp3');
+
 function playWizAudio(wiz) {
     wizAudio.src = wiz;
     wizAudio.load();
@@ -22,6 +24,7 @@ function playWizAudio(wiz) {
 populateRace(raceData);
 
 wizardDialogBox.textContent = script[5].description;
+window.onload = playWizAudio(wiz6);
 
 function populateRace() {
     radios[0].value = raceData[0].id;

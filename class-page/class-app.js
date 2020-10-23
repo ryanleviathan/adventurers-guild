@@ -11,6 +11,8 @@ const submitButton = document.getElementById('button');
 // Wizard Audio
 const wizAudio = document.getElementById('wiz-audio');
 
+const wiz7 = ('../assets/wizard-audio/007.mp3');
+
 function playWizAudio(wiz) {
     wizAudio.src = wiz;
     wizAudio.load();
@@ -51,6 +53,7 @@ function populateClass(classData) {
 populateClass(classData);
 
 dialogue.textContent = script[6].description;
+window.onload = playWizAudio(wiz7);
 
 //radios will pull class data and populate wizard dialogue & avatar sections with relevant information
 for (let i = 0; i < radios.length; i++) {
