@@ -37,27 +37,13 @@ function renderLineItems(USER) {
     });
 
     ulStats.classList = 'ul';
-    
+
     tr.append(tdName, tdClass, tdRace, ulStats);
 
     return tr;
 }
 
-// function renderTable() {
-//     const charResults = (getFromLocalStorage(USER));
-//     console.log(charResults);
-//     // Object.keys(charResults).map ((result) => {
-//     //     const result = charResults;
-//     //     const tr = renderLineItems(result);
-        
-//     //     console.log(result);
-//     //     table.append(tr);
 
-//     // });
-//     // console.log(charResults);
-//     // for (let i = 0; i < charResults.length; i++) {
-//     // }
-// }
 
 const tr = renderLineItems(charResults);
 table.append(tr);
