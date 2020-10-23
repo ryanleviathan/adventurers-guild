@@ -135,33 +135,13 @@ body {
         
 }
 
-/* .rolls-display {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    height: 250px;
-    width: 300px;
-    border: solid black;
-    margin-top: 2em;
-} */
-/* .rollRowOne {
-    border: solid black;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    align-items: center;
-    text-align: center;
-} */
+
 .roll-img {
     height: 50px;
     width: 50px;
 }
 
-/* .rollRowTwo {
-    border: solid black;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    align-items: center;
-    text-align: center;
-} */
+/
 span , p {
     margin-left: .5em;
 }
@@ -170,12 +150,7 @@ span , p {
     background-color: blue;
     display: none;
 } 
-/* .rollOne:hover{
-    transform: scale(1.2);
-    box-shadow:  5px 5px 5px 5px black;
-    border-radius: 15%;
-    opacity: 1;
-} */
+
 #radios {
     transform: scale(1.2);
     box-shadow:  5px 5px 5px 5px black;

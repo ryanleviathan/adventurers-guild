@@ -70,7 +70,7 @@ for (let i = 0; i < radios.length; i++) {
 
 //submit button will add selected class to USER in local storage
 submitButton.addEventListener('click', () => {
-    
+
     const checked = document.querySelector(':checked');
     const userClass = checked.value;
     const userData = getFromLocalStorage(USER);
