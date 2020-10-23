@@ -1,4 +1,5 @@
-import { findById, getFromLocalStorage, USER, imageArray, modifier } from '../utils.js';
+import { findById, getFromLocalStorage, USER, imageArray, modifier, setInLocalStorage } from '../utils.js';
+
 import { wizDialogIntro } from './character-utils.js';
 import race from '../data/race.js';
 // import classes from '../data/class.js';
@@ -23,6 +24,16 @@ const charismaMod = document.getElementById('chaMod');
 const button = document.getElementById('button');
 
 button.addEventListener('click', () => {
+    const statsElementsArray = document.querySelectorAll('.abilities');
+    const statsArray = [];
+    statsElementsArray.forEach((item, i) => {
+        statsArray.push({
+            id: `roll-${i}`,
+            value: item.textContent
+        });
+    });
+    userData.rolls = statsArray;
+    setInLocalStorage(USER, userData);
     document.location = '../results-page/index.html';
 });
 
