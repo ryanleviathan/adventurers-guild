@@ -14,16 +14,40 @@ body {
     border: solid black;
     height: 1000px;
 }
+.class-race {
+    display: grid;
+    grid-template-rows:75px 21px;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
 
+    
+}
+.user-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    flex-direction: right;
+}
 #character-name {
-    text-align: end;
+    padding-left: 2em;
+    justify-self: center;
+
+    
 }
 
+
 #character-class {
+
+    
+    
     
 }
 
 #character-race {
+    
+    
 
 }
 
