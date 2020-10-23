@@ -34,16 +34,21 @@ export function modifier(attribute) {
 const userData = getFromLocalStorage(USER);
 const userClass = findById(classes, userData.userClass);
 const dialog = document.getElementById('dialog');
-
+const characterName = document.getElementById('character-name');
+const characterClass = document.getElementById('class-name');
+const characterRace = document.getElementById('race-name');
 
 export function wizDialogIntro() {
     const primAbility = userClass.primaryAbility;
 
     setTimeout(() => { dialog.textContent = `Welcome to the character sheet page! We'll start by putting your name, ${userData.name}, in the character's name box at the top of your character sheet.`; }, 0);
+    setTimeout(() => { characterName.textContent = userData.name; }, 0);
 
     setTimeout(() => { dialog.textContent = `Now, we'll place your class in the top box to the right of your name.`; }, 8000);
+    setTimeout(() => { characterClass.textContent = userData.userClass; }, 8000);
 
     setTimeout(() => { dialog.textContent = `Now, we'll place your race in the box below your class.`; }, 12000);
+    setTimeout(() => { characterRace.textContent = userData.race; }, 12000);
 
     setTimeout(() => { dialog.textContent = `Now we'll select your Ability Scores. Based on your selections you are a ${userData.race} and your class is ${userData.userClass}. Your primary ability is ${primAbility}.`; }, 16000);
 
@@ -62,8 +67,8 @@ export function wizDialogIntro() {
     setTimeout(() => { dialog.textContent = `Charisma is being able to sell a tomato-based fruit salad.`; }, 61000);
 
     if (userData.userClass === 'bard') {
-        setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 66000); setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 71000);
+        setTimeout(() => { dialog.textContent = `Since you're a Bard, you know a tomato-based fruit salad is called salsa.`; }, 66000); setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 70000);
     } else if (!userData.userClass === 'bard') {
-        setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 66000);
+        setTimeout(() => { dialog.textContent = `Remember your primary ability is ${primAbility}, ${userData.name}! Click on one of your Ability Score values to my left to make your choice. Don't worry, I'll do the math for you. First, you'll be deciding your Strength stat.`; }, 71000);
     }
 }

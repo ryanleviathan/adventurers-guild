@@ -14,6 +14,19 @@ body {
     border: solid black;
     height: 1000px;
 }
+
+#character-name {
+    text-align: end;
+}
+
+#character-class {
+    
+}
+
+#character-race {
+
+}
+
 .statAssignBox {
     height: 370px;
     width: 100px;

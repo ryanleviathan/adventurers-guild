@@ -8,6 +8,7 @@ import { rollDice, imagePicker, attributeNumber, setInLocalStorage } from './uti
 
 // set event listeners to update state and DOM
 const audio = document.getElementById('audio');
+const wizAudio = document.getElementById('wiz-audio');
 const dialog = document.getElementById('dialog');
 const name = document.querySelector('input');
 const diceOne = document.getElementById('diceOne');
@@ -27,12 +28,20 @@ const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
+let userData;
+
 dialog.textContent = 'Welcome young adventurer! What is your name?';
 
 // Wizard Dialog
 const wiz1 = ('../assets/wizard-audio/001.m4a');
+const wiz2 = ('../assets/wizard-audio/002.m4a');
+const wiz3 = ('../assets/wizard-audio/003.m4a');
+const wiz4 = ('../assets/wizard-audio/004.m4a');
+const wiz5 = ('../assets/wizard-audio/005.m4a');
 
-let userData;
+function playWizAudio() {
+    wizAudio.play();
+}
 
 function playAudio() {
     audio.play();
