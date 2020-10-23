@@ -1,4 +1,5 @@
 import { findById, getFromLocalStorage, USER, imageArray, modifier, setInLocalStorage } from '../utils.js';
+
 import { wizDialogIntro } from './character-utils.js';
 import race from '../data/race.js';
 // import classes from '../data/class.js';
