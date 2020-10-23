@@ -83,6 +83,24 @@ const abilities = document.querySelectorAll('.abilities');
 
 wizDialogIntro();
 
+// Wizard Audio
+const wizAudio = document.getElementById('wiz-audio');
+
+function playWizAudio(wiz) {
+    wizAudio.src = wiz;
+    wizAudio.load();
+    wizAudio.play().then(_ => {
+        
+    })
+}
+
+const wizDex = ('../assets/wizard-audio/csDex.mp3');
+const wizCon = ('../assets/wizard-audio/csCon.mp3');
+const wizInt = ('../assets/wizard-audio/csInt.mp3');
+const wizWis = ('../assets/wizard-audio/csWis.mp3');
+const wizCha = ('../assets/wizard-audio/csCha.mp3');
+const wizFinal = ('../assets/wizard-audio/csFinal.mp3');
+
 // Sets ability scores by player selection going in order from Strength to Charisma. It also sets the ability modifier, talks you through selections, and sets initiative based on Dexterity modifier
 
 function populateAbilityScores(abilities) {
@@ -102,6 +120,7 @@ function populateAbilityScores(abilities) {
                 strength.textContent = Number(strBonus) + Number(checkedValue);
                 strengthMod.textContent = modifier(strength);
                 dialog.textContent = `Now, you'll be choosing your Dexterity stat.`;
+                playWizAudio(wizDex);
 
             } else if (abilities[1].textContent === 'dex') {
                 abilities[1].textContent = checkedValue;
@@ -115,6 +134,7 @@ function populateAbilityScores(abilities) {
                 dexterityMod.textContent = modifier(dexterity);
                 initiative.textContent = modifier(dexterity);
                 dialog.textContent = `Now, you'll be choosing your Constitution stat.`;
+                playWizAudio(wizCon);
 
             } else if (abilities[2].textContent === 'con') {
                 abilities[2].textContent = checkedValue;
@@ -127,6 +147,7 @@ function populateAbilityScores(abilities) {
                 constitution.textContent = Number(conBonus) + Number(checkedValue);
                 constitutionMod.textContent = modifier(constitution);
                 dialog.textContent = `Now, you'll be choosing your Intelligence stat.`;
+                playWizAudio(wizInt);
 
             } else if (abilities[3].textContent === 'int') {
                 abilities[3].textContent = checkedValue;
@@ -139,6 +160,7 @@ function populateAbilityScores(abilities) {
                 intelligence.textContent = Number(intBonus) + Number(checkedValue);
                 intelligenceMod.textContent = modifier(intelligence);
                 dialog.textContent = `Now, you'll be choosing your Wisdom stat.`;
+                playWizAudio(wizWis);
 
             } else if (abilities[4].textContent === 'wis') {
                 abilities[4].textContent = checkedValue;
@@ -151,6 +173,7 @@ function populateAbilityScores(abilities) {
                 wisdom.textContent = Number(wisBonus) + Number(checkedValue);
                 wisdomMod.textContent = modifier(wisdom);
                 dialog.textContent = `Now, you'll be choosing your final stat Charisma.`;
+                playWizAudio(wizCha);
 
             } else if (abilities[5].textContent === 'cha') {
                 abilities[5].textContent = checkedValue;
@@ -163,6 +186,7 @@ function populateAbilityScores(abilities) {
                 charisma.textContent = Number(chaBonus) + Number(checkedValue);
                 charismaMod.textContent = modifier(charisma);
                 dialog.textContent = `Congratulations ${userData.name}! If you look to the left side of your character sheet, you'll see your ability scores and modifiers have been populated! Your initiative bonus and speed have also been applied below your class and race. The rest of your character sheet you'll fill out once you've made your level 1 equipment selections and spells, if pertinant. Always ask your DM if you have questions.`;
+                playWizAudio(wizFinal);
             }
         });
     }

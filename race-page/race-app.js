@@ -8,6 +8,17 @@ const images = document.querySelectorAll('.races');
 const wizardDialogBox = document.getElementById('dialog');
 const button = document.getElementById('button');
 
+// Wizard Audio
+const wizAudio = document.getElementById('wiz-audio');
+
+function playWizAudio(wiz) {
+    wizAudio.src = wiz;
+    wizAudio.load();
+    wizAudio.play().then(_ => {
+
+    })
+}
+
 populateRace(raceData);
 
 wizardDialogBox.textContent = script[5].description;
@@ -39,7 +50,9 @@ for (let i = 0; i < radios.length; i++) {
         const raceId = e.target.value;
         const raceChecked = findById(raceData, raceId);
         const dialog = raceChecked.description;
+        const wizAudio = raceChecked.audio;
 
+        playWizAudio(wizAudio);
         return wizardDialogBox.textContent = dialog;
     });
 }
