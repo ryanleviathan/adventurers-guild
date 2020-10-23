@@ -33,22 +33,31 @@ let userData;
 dialog.textContent = 'Welcome young adventurer! What is your name?';
 
 // Wizard Dialog
-const wiz1 = ('../assets/wizard-audio/001.m4a');
-const wiz2 = ('../assets/wizard-audio/002.m4a');
-const wiz3 = ('../assets/wizard-audio/003.m4a');
-const wiz4 = ('../assets/wizard-audio/004.m4a');
-const wiz5 = ('../assets/wizard-audio/005.m4a');
+const wiz1 = ('./assets/wizard-audio/001.mp3');
+const wiz2 = ('./assets/wizard-audio/002.mp3');
+const wiz3 = ('./assets/wizard-audio/003.mp3');
+const wiz4 = ('./assets/wizard-audio/004.mp3');
+const wiz5 = ('./assets/wizard-audio/005.mp3');
 
-function playWizAudio() {
-    wizAudio.play();
+function playWizAudio(wiz) {
+    wizAudio.src = wiz;
+    wizAudio.load();
+    wizAudio.play().then(_ => {
+
+    })
 }
 
 function playAudio() {
     audio.play();
 }
 
+name.addEventListener('click', () => {
+    playWizAudio(wiz1);
+});
+
 nameButton.addEventListener('click', () => {
     playAudio();
+    playWizAudio(wiz2);
     const userName = name.value;
     nameButton.classList.add('display');
     nameButton.style.display = 'none';
@@ -65,8 +74,10 @@ nameButton.addEventListener('click', () => {
     dialog.textContent = script[1].description;
 
     setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
+    setTimeout(() => { playWizAudio(wiz3); }, 10000);
     
-    setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
+    setTimeout(() => { dialog.textContent = script[3].description; }, 25000);
+    setTimeout(() => { playWizAudio(wiz4); }, 25000);
     
 });
 
@@ -118,6 +129,7 @@ roll.addEventListener('click', () => {
         userData.rolls = rollsToPush;
         setInLocalStorage(USER, userData);
         dialog.textContent = script[4].description;
+        playWizAudio(wiz5);
     }
 });
 

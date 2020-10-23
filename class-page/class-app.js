@@ -8,6 +8,17 @@ const images = document.querySelectorAll('.classes');
 const dialogue = document.getElementById('dialog');
 const submitButton = document.getElementById('button');
 
+// Wizard Audio
+const wizAudio = document.getElementById('wiz-audio');
+
+function playWizAudio(wiz) {
+    wizAudio.src = wiz;
+    wizAudio.load();
+    wizAudio.play().then(_ => {
+
+    })
+}
+
 function populateClass(classData) {
     radios[0].value = classData[0].id;
     radios[1].value = classData[1].id;
@@ -47,7 +58,9 @@ for (let i = 0; i < radios.length; i++) {
         const classId = e.target.value;
         const classChecked = findById(classData, classId);
         const wizardDialogue = classChecked.description;
-        
+        const wizAudio = classChecked.audio;
+
+        playWizAudio(wizAudio);
         return dialogue.textContent = wizardDialogue;
     });
 }
