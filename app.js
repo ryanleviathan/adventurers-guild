@@ -27,14 +27,15 @@ const LiFive = document.getElementById('five');
 const LiSix = document.getElementById('six');
 const nameButton = document.getElementById('nameButton');
 
-
-
 dialog.textContent = 'Welcome young adventurer! What is your name?';
+
+// Wizard Dialog
+const wiz1 = ('../assets/wizard-audio/001.m4a');
+
 let userData;
 
 function playAudio() {
     audio.play();
-
 }
 
 nameButton.addEventListener('click', () => {
@@ -55,7 +56,9 @@ nameButton.addEventListener('click', () => {
     dialog.textContent = script[1].description;
 
     setTimeout(() => { dialog.textContent = script[2].description; }, 10000);
+    
     setTimeout(() => { dialog.textContent = script[3].description; }, 10000);
+    
 });
 
 let rollTracker = [];
