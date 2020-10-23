@@ -15,10 +15,26 @@ div {
     display: grid;
     grid-row: 50% 50%;
     border: solid black 2px;
-    border-radius: 15em;
+    border-radius: 5px;
     align-items: center;
     justify-content: left;
     background-color: lightblue;
     opacity: 5;
     text-align: center;
+    margin: 30px;
 }
+
+button {
+
+    background-color: red;
+    width: 300px;
+    height: 50px;
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: papyrus;
+    border-radius: 15px;
+
+}
+
