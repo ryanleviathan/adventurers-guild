@@ -9,6 +9,12 @@ const userData = getFromLocalStorage(USER);
 
 //Attributes from DOM
 const dialog = document.getElementById('dialog');
+const characterName = document.getElementById('character-name');
+characterName.textContent = userData.name;
+const characterClass = document.getElementById('class-name');
+characterClass.textContent = userData.userClass;
+const characterRace = document.getElementById('race-name');
+characterRace.textContent = userData.race;
 const strength = document.getElementById('str');
 const strengthMod = document.getElementById('strMod');
 const dexterity = document.getElementById('dex');
