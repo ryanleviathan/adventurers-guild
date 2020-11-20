@@ -5,20 +5,9 @@ export function rollDice() {
     return roll;
 }
 export function imagePicker(img, dice) {
-    if (dice.value === 1) {
-        img.src = './assets/d6-assets/1.png';
-    } if (dice.value === 2) {
-        img.src = './assets/d6-assets/2.png';
-    } if (dice.value === 3) {
-        img.src = './assets/d6-assets/3.png';
-    } if (dice.value === 4) {
-        img.src = './assets/d6-assets/4.png';
-    } if (dice.value === 5) {
-        img.src = './assets/d6-assets/5.png';
-    } if (dice.value === 6) {
-        img.src = './assets/d6-assets/6.png';
-    }
+    img.src = `./assets/d6-assets/${dice.value}.png`;
 }
+
 export function attributeNumber(rollArray) {
     const lowest = Math.min(rollArray[0], rollArray[1], rollArray[2], rollArray[3]);
     const totalOfAll = rollArray[0] + rollArray[1] + rollArray[2] + rollArray[3];
@@ -64,6 +53,7 @@ export const imageArray = [
 export function numberImage(image, radio) {
     image.src = imageArray[Number(radio.value) + 1];
 }
+// looks like this is defined in character utils as well--pick one place
 export function modifier(attribute) {
     const modVal = Number(attribute.textContent);
     if (modVal === 1) {
