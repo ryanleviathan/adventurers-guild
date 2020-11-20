@@ -39,12 +39,14 @@ const wiz3 = ('./assets/wizard-audio/003.mp3');
 const wiz4 = ('./assets/wizard-audio/004.mp3');
 const wiz5 = ('./assets/wizard-audio/005.mp3');
 
+// very cool function--great code reuse
 function playWizAudio(wiz) {
     wizAudio.src = wiz;
     wizAudio.load();
+    // was this prmise chain required to get it to work?
     wizAudio.play().then(_ => {
 
-    })
+    });
 }
 
 function playAudio() {
@@ -87,28 +89,28 @@ let rollsRemaining = 6;
 let rollsToPush = [];
 
 roll.addEventListener('click', () => {
-    diceOne.value = Number(rollDice());
-    diceTwo.value = Number(rollDice());
-    diceThree.value = Number(rollDice());
-    diceFour.value = Number(rollDice());
+    // probably could have stored these dice in an array and handled this in a for loop
+    /* */
+    const dice = [diceOne, diceTwo, diceThree, diceFour];
+    const images = [imgOne, imgTwo, imgThree, imgFour];
 
-    imagePicker(imgOne, diceOne);
-    imagePicker(imgTwo, diceTwo);
-    imagePicker(imgThree, diceThree);
-    imagePicker(imgFour, diceFour);
+    for (let i = 0; i < dice.length; i++) {
+        dice[i].value = Number(rollDice());
+        imagePicker(images[i], dice[i]);
+    }
 
-    let rollArray = [];
 
-    rollArray.push(diceOne.value, diceTwo.value, diceThree.value, diceFour.value);
-    let totalOfRoll = attributeNumber(rollArray);
+
+    const rollArray = [diceOne.value, diceTwo.value, diceThree.value, diceFour.value];
+
+    const totalOfRoll = attributeNumber(rollArray);
     rollTracker.push(totalOfRoll);
 
-    LiOne.textContent = rollTracker[0];
-    LiTwo.textContent = rollTracker[1];
-    LiThree.textContent = rollTracker[2];
-    LiFour.textContent = rollTracker[3];
-    LiFive.textContent = rollTracker[4];
-    LiSix.textContent = rollTracker[5];
+    const lis = [LiOne, LiTwo, LiThree, LiFour, LiFive, LiSix];
+
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].textContent = rollTracker[0];
+    }
 
     --rollsRemaining;
 

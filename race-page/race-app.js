@@ -8,18 +8,14 @@ const images = document.querySelectorAll('.races');
 const wizardDialogBox = document.getElementById('dialog');
 const button = document.getElementById('button');
 
+// no need to define this in every file--define it once and import it
+import playWizAudio from './some-utils-file.js';
+
 // Wizard Audio
 const wizAudio = document.getElementById('wiz-audio');
 
 const wiz6 = ('../assets/wizard-audio/006.mp3');
 
-function playWizAudio(wiz) {
-    wizAudio.src = wiz;
-    wizAudio.load();
-    wizAudio.play().then(_ => {
-
-    })
-}
 
 populateRace(raceData);
 
@@ -27,25 +23,10 @@ wizardDialogBox.textContent = script[5].description;
 window.onload = playWizAudio(wiz6);
 
 function populateRace() {
-    radios[0].value = raceData[0].id;
-    radios[1].value = raceData[1].id;
-    radios[2].value = raceData[2].id;
-    radios[3].value = raceData[3].id;
-    radios[4].value = raceData[4].id;
-    radios[5].value = raceData[5].id;
-    radios[6].value = raceData[6].id;
-    radios[7].value = raceData[7].id;
-    radios[8].value = raceData[8].id;
-
-    images[0].src = raceData[0].image;
-    images[1].src = raceData[1].image;
-    images[2].src = raceData[2].image;
-    images[3].src = raceData[3].image;
-    images[4].src = raceData[4].image;
-    images[5].src = raceData[5].image;
-    images[6].src = raceData[6].image;
-    images[7].src = raceData[7].image;
-    images[8].src = raceData[8].image;
+    for (let i = 0; i < 9; i++) {
+        radios[i].value = raceData[i].id;
+        images[i].src = raceData[i].image;
+    }
 }
 
 for (let i = 0; i < radios.length; i++) {

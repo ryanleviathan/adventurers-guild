@@ -1,34 +1,13 @@
 import classes from '../data/class.js';
 import { findById, getFromLocalStorage, USER } from '../utils.js';
 // import race from '../data/race.js';
+import playWizAudio from './wherever.js';
 
+const mods = [0, -5, -4, -4, -3, -3, -2, -2, -1, -1, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 export function modifier(attribute) {
     const modVal = Number(attribute.textcontent);
-    if (modVal === 1) {
-        return -5;
-    } if (modVal === 2 || modVal === 3) {
-        return -4;
-    } if (modVal === 4 || modVal === 5) {
-        return -3;
-    } if (modVal === 6 || modVal === 7) {
-        return -2;
-    } if (modVal === 8 || modVal === 9) {
-        return -1;
-    } if (modVal === 10 || modVal === 11) {
-        return 0;
-    } if (modVal === 12 || modVal === 13) {
-        return 1;
-    } if (modVal === 14 || modVal === 15) {
-        return 2;
-    } if (modVal === 16 || modVal === 17) {
-        return 3;
-    } if (modVal === 18 || modVal === 19) {
-        return 4;
-    } if (modVal === 20 || modVal === 21) {
-        return 5;
-    } if (modVal === 22 || modVal === 23) {
-        return 6;
-    }
+    // looks like modVal could just be an index of an array
+    return mods[modVal];
 }
 
 const userData = getFromLocalStorage(USER);
@@ -37,17 +16,6 @@ const dialog = document.getElementById('dialog');
 const characterName = document.getElementById('character-name');
 const characterClass = document.getElementById('class-name');
 const characterRace = document.getElementById('race-name');
-
-// Wizard Audio
-const wizAudio = document.getElementById('wiz-audio');
-
-function playWizAudio(wiz) {
-    wizAudio.src = wiz;
-    wizAudio.load();
-    wizAudio.play().then(_ => {
-
-    })
-}
 
 const wiz1 = ('../assets/wizard-audio/cs1.mp3');
 const wiz2 = ('../assets/wizard-audio/cs2.mp3');

@@ -10,6 +10,7 @@ button.addEventListener('click', () => {
 
 const charResults = getFromLocalStorage(USER);
 
+// nice idea!
 const abilitiesArray = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 
 function renderLineItems(USER) {

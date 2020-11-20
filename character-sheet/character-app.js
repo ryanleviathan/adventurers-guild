@@ -91,9 +91,10 @@ function playWizAudio(wiz) {
     wizAudio.load();
     wizAudio.play().then(_ => {
         
-    })
+    });
 }
 
+// good idea storing these in consts
 const wizDex = ('../assets/wizard-audio/csDex.mp3');
 const wizCon = ('../assets/wizard-audio/csCon.mp3');
 const wizInt = ('../assets/wizard-audio/csInt.mp3');
@@ -101,6 +102,21 @@ const wizWis = ('../assets/wizard-audio/csWis.mp3');
 const wizCha = ('../assets/wizard-audio/csCha.mp3');
 const wizFinal = ('../assets/wizard-audio/csFinal.mp3');
 
+// this would probably work. Ideally I would want to have more of this data living in objects, so it's organized into json to be configured late
+function doStuff(el, modEl, wizAudio, checkedValue, message, key) {
+    abilities[0].textContent = checkedValue;
+
+    let raceInfo = findById(race, userData.race);
+    let strBonus = raceInfo.strength;
+    if (!raceInfo[key]) {
+        strBonus = 0;
+    }
+    strength.textContent = Number(strBonus) + Number(checkedValue);
+    strengthMod.textContent = modifier(strength);
+    dialog.textContent = message;
+    playWizAudio(wizAudio);
+
+}
 // Sets ability scores by player selection going in order from Strength to Charisma. It also sets the ability modifier, talks you through selections, and sets initiative based on Dexterity modifier
 
 function populateAbilityScores(abilities) {
@@ -112,81 +128,65 @@ function populateAbilityScores(abilities) {
             if (abilities[0].textContent === 'str') {
                 abilities[0].textContent = checkedValue;
 
-                let raceInfo = findById(race, userData.race);
-                let strBonus = raceInfo.strength;
-                if (!raceInfo.strength) {
-                    strBonus = 0;
-                }
-                strength.textContent = Number(strBonus) + Number(checkedValue);
-                strengthMod.textContent = modifier(strength);
-                dialog.textContent = `Now, you'll be choosing your Dexterity stat.`;
-                playWizAudio(wizDex);
-
+                doStuff(
+                    strength, 
+                    strengthMod, 
+                    wizDex, 
+                    `Now, you'll be choosing your Dexterity stat.`, 
+                    'strength'
+                );
             } else if (abilities[1].textContent === 'dex') {
                 abilities[1].textContent = checkedValue;
 
-                let raceInfo = findById(race, userData.race);
-                let dexBonus = raceInfo.dexterity;
-                if (!raceInfo.dexterity) {
-                    dexBonus = 0;
-                }
-                dexterity.textContent = Number(dexBonus) + Number(checkedValue);
-                dexterityMod.textContent = modifier(dexterity);
-                initiative.textContent = modifier(dexterity);
-                dialog.textContent = `Now, you'll be choosing your Constitution stat.`;
-                playWizAudio(wizCon);
-
+                doStuff(
+                    dexterity, 
+                    dexterityMod, 
+                    wizCon, 
+                    `Now, you'll be choosing your Constitution stat.`, 
+                    'dexterity'
+                );
+        
             } else if (abilities[2].textContent === 'con') {
                 abilities[2].textContent = checkedValue;
 
-                let raceInfo = findById(race, userData.race);
-                let conBonus = raceInfo.constitution;
-                if (!raceInfo.constitution) {
-                    conBonus = 0;
-                }
-                constitution.textContent = Number(conBonus) + Number(checkedValue);
-                constitutionMod.textContent = modifier(constitution);
-                dialog.textContent = `Now, you'll be choosing your Intelligence stat.`;
-                playWizAudio(wizInt);
-
+                doStuff(
+                    constitution, 
+                    constitutionMod, 
+                    wizInt, 
+                    `Now, you'll be choosing your Intelligence stat.`, 
+                    'constitution'
+                );
             } else if (abilities[3].textContent === 'int') {
                 abilities[3].textContent = checkedValue;
 
-                let raceInfo = findById(race, userData.race);
-                let intBonus = raceInfo.intelligence;
-                if (!raceInfo.intelligence) {
-                    intBonus = 0;
-                }
-                intelligence.textContent = Number(intBonus) + Number(checkedValue);
-                intelligenceMod.textContent = modifier(intelligence);
-                dialog.textContent = `Now, you'll be choosing your Wisdom stat.`;
-                playWizAudio(wizWis);
-
+                
+                doStuff(
+                    intelligence, 
+                    intelligenceMod, 
+                    wizWis, 
+                    `Now, you'll be choosing your Wisdom stat.`, 
+                    'wisdom'
+                );
             } else if (abilities[4].textContent === 'wis') {
                 abilities[4].textContent = checkedValue;
-
-                let raceInfo = findById(race, userData.race);
-                let wisBonus = raceInfo.wisdom;
-                if (!raceInfo.wisdom) {
-                    wisBonus = 0;
-                }
-                wisdom.textContent = Number(wisBonus) + Number(checkedValue);
-                wisdomMod.textContent = modifier(wisdom);
-                dialog.textContent = `Now, you'll be choosing your final stat Charisma.`;
-                playWizAudio(wizCha);
-
+     
+                doStuff(
+                    constitution, 
+                    constitutionMod, 
+                    wizCha, 
+                    `Now, you'll be choosing your Charisma stat.`, 
+                    'wisdom'
+                );
             } else if (abilities[5].textContent === 'cha') {
                 abilities[5].textContent = checkedValue;
-
-                let raceInfo = findById(race, userData.race);
-                let chaBonus = raceInfo.charisma;
-                if (!raceInfo.charisma) {
-                    chaBonus = 0;
-                }
-                charisma.textContent = Number(chaBonus) + Number(checkedValue);
-                charismaMod.textContent = modifier(charisma);
-                dialog.textContent = `Congratulations ${userData.name}! If you look to the left side of your character sheet, you'll see your ability scores and modifiers have been populated! Your initiative bonus and speed have also been applied below your class and race. The rest of your character sheet you'll fill out once you've made your level 1 equipment selections and spells, if pertinant. Always ask your DM if you have questions.`;
-                playWizAudio(wizFinal);
+                     
+                doStuff(
+                    charisma, 
+                    charismaMod, 
+                    wizFinal, 
+                    `Congratulations ${userData.name}! If you look to the left side of your character sheet, you'll see your ability scores and modifiers have been populated! Your initiative bonus and speed have also been applied below your class and race. The rest of your character sheet you'll fill out once you've made your level 1 equipment selections and spells, if pertinant. Always ask your DM if you have questions.`, 
+                    'charisma'
+                );
             }
         });
     }
